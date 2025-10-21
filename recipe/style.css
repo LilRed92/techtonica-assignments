@@ -1,0 +1,50 @@
+
+
+hgroup {
+    text-align: center;
+}
+
+main {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#time-utensils {
+    margin: 5px 20px;
+    padding: 20px;
+    flex-grow: 3;
+}
+
+#utensils {
+    column-count: 3;
+    column-gap: 10px;
+}
+
+
+#imgcontainer {
+  display: flex;
+  flex-flow: column;
+  max-width: 275px;
+  padding: 5px;
+  margin: auto;
+}
+
+img {
+    width: 70%;
+    height: auto;
+    align-self: center;
+}
+
+figcaption {
+    background-color: #222222;
+    color: white;
+    font: italic smaller sans-serif;
+    font-size: 9pt;
+    padding: 3px;
+    text-align: center;
+}
