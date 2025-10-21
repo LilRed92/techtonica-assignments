@@ -5,3 +5,8 @@ p {
 body {
     background-color: #0086af;
 }
+
+hgroup, h3, h4, li {
+    color: rgb(233, 233, 233);
+
+}
