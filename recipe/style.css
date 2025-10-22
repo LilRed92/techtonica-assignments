@@ -22,6 +22,10 @@ h1, h2, h3, h4 {
     font-style: normal;
 }
 
+h3, h4 {
+    font-size: 15pt;
+}
+
 .description {
     width: 600px;
 }
@@ -29,9 +33,11 @@ h1, h2, h3, h4 {
 .left {
     width: 600px;
     float: left;
+    margin-top: 30px;
 }
 
 .right {
     width: 600px;
     float: left;
+    margin-left: 30px;
 }
