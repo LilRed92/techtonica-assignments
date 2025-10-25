@@ -27,8 +27,17 @@ h3, h4 {
     font-size: 15pt;
 }
 
+ul, ol {
+    margin-bottom: 40px;
+}
+
 .description {
     width: 600px;
+    margin-top: 20px;
+}
+
+.top {
+    margin-top: 20px;
 }
 
 .left {
@@ -36,8 +45,24 @@ h3, h4 {
     float: left;
 }
 
+.top, .left {
+    margin-left: 20px;
+}
+
 .right {
     width: 600px;
     float: left;
     margin-left: 30px;
+}
+
+a {
+    color: purple;
+    margin: 5px;
+    padding: 5px;
+}
+
+.recipeLinks {
+    display: flex;
+    margin: 10x;
+    padding: 10px;
 }
