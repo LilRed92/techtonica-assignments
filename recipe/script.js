@@ -20,6 +20,13 @@ cupcakeListItems.forEach((li, index) => {
     checkbox.name = `item-${index}`;
     checkbox.id = `checkbox-${index}`;
     li.prepend(checkbox);
+    checkbox.addEventListener('change', (event) => {
+        if (event.target.checked) {
+             li.classList.add('checked');
+        } else {
+            li.classList.remove('checked');
+        }
+    })
 })
 
 //Code for adding checkboxes to filling ingredients list items
@@ -31,6 +38,13 @@ fillingListItems.forEach((li, index) => {
     checkbox.name = `item-${index}`;
     checkbox.id = `checkbox-${index}`;
     li.prepend(checkbox);
+    checkbox.addEventListener('change', (event) => {
+        if (event.target.checked) {
+             li.classList.add('checked');
+        } else {
+            li.classList.remove('checked');
+        }
+    })
 })
 
 //Code for adding checkboxes to icing ingredients list items
@@ -42,4 +56,12 @@ icingListItems.forEach((li, index) => {
     checkbox.name = `item-${index}`;
     checkbox.id = `checkbox-${index}`;
     li.prepend(checkbox);
+    checkbox.addEventListener('change', (event) => {
+        if (event.target.checked) {
+             li.classList.add('checked');
+        } else {
+            li.classList.remove('checked');
+        }
+    })
 })
+
