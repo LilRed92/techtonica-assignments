@@ -31,7 +31,7 @@ ul, ol {
     margin-bottom: 40px;
 }
 
-.navbar-brand, .nav-link{
+.nav-link{
     color: white;
 }
 
@@ -81,4 +81,20 @@ input[type="checkbox"] {
 
 .checked {
     text-decoration: line-through;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .left, .right {
+        width: 80%;
+    }
+    .left, .right {
+        display: inline-block;
+    }
+    #recipeImg, .description {
+        width: 70%;
+    }
 }

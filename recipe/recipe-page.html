@@ -15,7 +15,7 @@
   <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(211, 191, 254);">
-            <a class="navbar-brand" href="#"><img width=100px src="assets/hostess-cupcake.png" alt="Hostess cupcake"/></a>
+            <a class="navbar-brand" href="#"><img id="navImg" width=100px src="assets/hostess-cupcake.png" alt="Hostess cupcake"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,17 +27,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#otherRecipes">Similar Recipes</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                 </li>
                 </ul>
             </div>
@@ -59,9 +48,11 @@
         <div class="left col-xs-12">
             <div>
                 <!---Img with photo credit-->
-                <img width=600px src="https://www.allrecipes.com/thmb/YRBPcGk5fvbwW32O6PNNBCXxvBE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8536153-Cream-Filled-Cupcakes-4x3-1-2000-52ae1f3e296044ed81e7fee662e6900a.jpg" alt="Homemade hostess cupcakes"/>
+                <img id="recipeImg" width=600px src="https://www.allrecipes.com/thmb/YRBPcGk5fvbwW32O6PNNBCXxvBE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8536153-Cream-Filled-Cupcakes-4x3-1-2000-52ae1f3e296044ed81e7fee662e6900a.jpg" alt="Homemade hostess cupcakes"/>
                 <p>Photo credit: <a href="https://www.allrecipes.com/recipe/8536153/homemade-hostess-cupcakes/">allrecipes</a></p>
             </div>
+
+            <a href="#" id="showRecipe" class="hidden">Show Recipe</a>
 
             <div>
                 <!---List of cupcake ingredients-->

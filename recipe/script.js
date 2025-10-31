@@ -1,4 +1,4 @@
-//Code for adding items to a list
+// Code for adding items to a list
 const toppingInput = document.getElementById('toppingInput');
 const button = document.getElementById('addTopping');
 const toppingsList = document.getElementById('toppings')
@@ -11,7 +11,7 @@ button.addEventListener('click', function() {
     toppingInput.value = '';
 })
 
-//Code for adding checkboxes to cupcake ingredients list items
+// Code for adding checkboxes to cupcake ingredients list items
 const cupcakeListItems = document.querySelectorAll('#cupcakeIngredients li');
 
 cupcakeListItems.forEach((li, index) => {
@@ -29,7 +29,7 @@ cupcakeListItems.forEach((li, index) => {
     })
 })
 
-//Code for adding checkboxes to filling ingredients list items
+// Code for adding checkboxes to filling ingredients list items
 const fillingListItems = document.querySelectorAll('#fillingIngredients li');
 
 fillingListItems.forEach((li, index) => {
@@ -47,7 +47,7 @@ fillingListItems.forEach((li, index) => {
     })
 })
 
-//Code for adding checkboxes to icing ingredients list items
+// Code for adding checkboxes to icing ingredients list items
 const icingListItems = document.querySelectorAll('#icingIngredients li');
 
 icingListItems.forEach((li, index) => {
@@ -65,3 +65,5 @@ icingListItems.forEach((li, index) => {
     })
 })
 
+
+// Code for @media to show and hide ingredients and instructions on page.
