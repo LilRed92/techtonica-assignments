@@ -13,9 +13,9 @@
   </head>
 
   <body>
-   <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7fd6ff;">
-            <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(211, 191, 254);">
+            <a class="navbar-brand" href="#"><img id="navImg" width=100px src="assets/hostess-cupcake.png" alt="Hostess cupcake"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,34 +26,16 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="#otherRecipes">Similar Recipes</a>
                 </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </nav>
     </div>
     
 
-   <div class="container row">
-        <div class="top col-12">
+    <div class="container-fluid">
+        <div class="top col-xs-12">
             <h1>Most Delicious Hostess Cupcakes Copycat Recipe!</h1>
             <h2>Recipe By Kacie Dearman</h2>
 
@@ -65,16 +47,16 @@
         </div>
 
         <div class="left col-12">
-            <div>
                 <!---Img with photo credit-->
-                <img width=600px src="https://www.allrecipes.com/thmb/YRBPcGk5fvbwW32O6PNNBCXxvBE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8536153-Cream-Filled-Cupcakes-4x3-1-2000-52ae1f3e296044ed81e7fee662e6900a.jpg" alt="Homemade hostess cupcakes"/>
+                <img id="recipeImg" width=600px src="https://www.allrecipes.com/thmb/YRBPcGk5fvbwW32O6PNNBCXxvBE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8536153-Cream-Filled-Cupcakes-4x3-1-2000-52ae1f3e296044ed81e7fee662e6900a.jpg" alt="Homemade hostess cupcakes"/>
                 <p>Photo credit: <a href="https://www.allrecipes.com/recipe/8536153/homemade-hostess-cupcakes/">allrecipes</a></p>
-            </div>
 
-            <div>
+            <a href="#" id="showRecipe" class="hidden">Show Recipe</a>
+
                 <!---List of cupcake ingredients-->
+                
                 <h4>Cupcake Ingredients</h4>
-                    <ul id="cupcake-ingredients" class="cupcake">
+                    <ul id="cupcakeIngredients" class="ingredients">
                         <li>1 and 3/4 cups - all-purpose flour</li>
                         <li>3/4 cup - unsweetened cocoa powder</li>
                         <li>1 and 3/4 cups - granulated sugar</li>
@@ -85,13 +67,13 @@
                         <li>1/2 cup - vegetable oil (canola oil or melted coconut oil)</li>
                         <li>2 large eggs (room temperature)</li>
                         <li>2 tsp - pure vanilla extract</li>
-                        <li>1 cup - buttermilk (room temperature) **See note for alternative.</li>
+                        <li>1 cup - buttermilk (room temperature) ** Note</li>
                         <li>1 cup - strong <strong>HOT</strong> coffee</li>
                     </ul>
 
                 <!---List of filling ingredients-->
                 <h4>Filling Ingredients</h4>
-                    <ul id="filling-ingredients" class="filling">
+                    <ul id="fillingIngredients" class="ingredients">
                         <li>3 large egg <strong>whites</strong> (room temperature)</li>
                         <li>1/2 tsp - cream of tartar</li>
                         <li>3/4 cup - corn syrup or honey</li>
@@ -100,14 +82,20 @@
                         <li>1 tsp - vanilla extract</li>
                     </ul>
 
-                <!---List of icing ingredients-->
+                    <!---List of icing ingredients-->
                 <h4>Icing Ingredients</h4>
-                    <ul id="icing-ingredients" class="icing">
+                    <ul id="icingIngredients" class="ingredients">
                         <li>8 oz - at least 70% cacao (I use chips, but you could use baking bars.)</li>
                         <li>1 cup - heavy cream</li>
                         <li>A couple of Tbsp of corn syrup or honey</li>
                     </ul>
-            </div>
+
+                    <!---List of toppings-->
+                <h4>Optional Toppings</h4>
+                    <ul id="toppings" class="toppings">
+                    </ul>
+                    <input type="text" id="toppingInput" placeholder="Sprinkles">
+                    <button id="addTopping" class="toppingButton">Add toppings</button>
         </div>
 
         <div class="right col-12">
@@ -154,15 +142,18 @@
                     </ol>
             </div>
 
-            <div>
+            <div id ="otherRecipes" class="otherRecipes">
                 <!---Section for similar recipe links-->
                 <h3>Similar Recipes</h3>
-                    <a href="https://sallysbakingaddiction.com/cream-filled-chocolate-cupcakes/">Cream Filled Chocolate Cupcakes</a>
-                    <a href="https://www.browneyedbaker.com/homemade-hostess-cupcakes/">Homemade Hostess Cupcakes</a>
+                    <div class="recipeLinks">
+                        <a href="https://sallysbakingaddiction.com/cream-filled-chocolate-cupcakes/">Cream Filled Chocolate Cupcakes</a>
+                        <a href="https://www.browneyedbaker.com/homemade-hostess-cupcakes/">Homemade Hostess Cupcakes</a>
+                    </div>
+                    
             </div>
         </div>
     </div>
     
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
