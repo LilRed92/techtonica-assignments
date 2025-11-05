@@ -47,62 +47,67 @@
         </div>
 
         <div class="left col-12">
-                <!---Img with photo credit-->
-                <img id="recipeImg" width=600px src="https://www.allrecipes.com/thmb/YRBPcGk5fvbwW32O6PNNBCXxvBE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8536153-Cream-Filled-Cupcakes-4x3-1-2000-52ae1f3e296044ed81e7fee662e6900a.jpg" alt="Homemade hostess cupcakes"/>
-                <p>Photo credit: <a href="https://www.allrecipes.com/recipe/8536153/homemade-hostess-cupcakes/">allrecipes</a></p>
+            <!---Img with photo credit-->
+            <img id="recipeImg" width=600px src="https://www.allrecipes.com/thmb/YRBPcGk5fvbwW32O6PNNBCXxvBE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8536153-Cream-Filled-Cupcakes-4x3-1-2000-52ae1f3e296044ed81e7fee662e6900a.jpg" alt="Homemade hostess cupcakes"/>
+            <p>Photo credit: <a href="https://www.allrecipes.com/recipe/8536153/homemade-hostess-cupcakes/">allrecipes</a></p>
+            
+            <!--Elements only shown on small screens-->
+            <div class="tab hide-on-large">
+                <button class="tablinks" onclick="openRecipe(event, 'Cupcake')">Cupcake</button>
+                <button class="tablinks" onclick="openRecipe(event, 'Filling')">Filling</button>
+                <button class="tablinks" onclick="openRecipe(event, 'Icing')">Icing</button>
+                <button class="tablinks" onclick="openRecipe(event, 'Toppings')">Toppings</button>
+            </div>
+            <!--End of small screen only elements-->
 
-            <a href="#" id="showRecipe" class="hidden">Show Recipe</a>
+            <!---List of cupcake ingredients-->
+            <h4 class="cupcake hide-on-small">Cupcake Ingredients</h4>
+                <ul id="cupcakeIngredients" class="cupcake hide-on-small">
+                    <li>1 and 3/4 cups - all-purpose flour</li>
+                    <li>3/4 cup - unsweetened cocoa powder</li>
+                    <li>1 and 3/4 cups - granulated sugar</li>
+                    <li>2 tsp - baking soda</li>
+                    <li>1 tsp - baking powder</li>
+                    <li>1 tsp - salt</li>
+                    <li>2 tsp - espresso powder</li>
+                    <li>1/2 cup - vegetable oil (canola oil or melted coconut oil)</li>
+                    <li>2 large eggs (room temperature)</li>
+                    <li>2 tsp - pure vanilla extract</li>
+                    <li>1 cup - buttermilk (room temperature) ** Note</li>
+                    <li>1 cup - strong <strong>HOT</strong> coffee</li>
+                </ul>
 
-                <!---List of cupcake ingredients-->
-                
-                <h4>Cupcake Ingredients</h4>
-                    <ul id="cupcakeIngredients" class="ingredients">
-                        <li>1 and 3/4 cups - all-purpose flour</li>
-                        <li>3/4 cup - unsweetened cocoa powder</li>
-                        <li>1 and 3/4 cups - granulated sugar</li>
-                        <li>2 tsp - baking soda</li>
-                        <li>1 tsp - baking powder</li>
-                        <li>1 tsp - salt</li>
-                        <li>2 tsp - espresso powder</li>
-                        <li>1/2 cup - vegetable oil (canola oil or melted coconut oil)</li>
-                        <li>2 large eggs (room temperature)</li>
-                        <li>2 tsp - pure vanilla extract</li>
-                        <li>1 cup - buttermilk (room temperature) ** Note</li>
-                        <li>1 cup - strong <strong>HOT</strong> coffee</li>
-                    </ul>
+            <!---List of filling ingredients-->
+            <h4 class="filling hide-on-small">Filling Ingredients</h4>
+                <ul id="fillingIngredients" class="filling hide-on-small">
+                    <li>3 large egg <strong>whites</strong> (room temperature)</li>
+                    <li>1/2 tsp - cream of tartar</li>
+                    <li>3/4 cup - corn syrup or honey</li>
+                    <li>3/4 cup - granulated sugar</li>
+                    <li>1/3 cup - water</li>
+                    <li>1 tsp - vanilla extract</li>
+                </ul>
 
-                <!---List of filling ingredients-->
-                <h4>Filling Ingredients</h4>
-                    <ul id="fillingIngredients" class="ingredients">
-                        <li>3 large egg <strong>whites</strong> (room temperature)</li>
-                        <li>1/2 tsp - cream of tartar</li>
-                        <li>3/4 cup - corn syrup or honey</li>
-                        <li>3/4 cup - granulated sugar</li>
-                        <li>1/3 cup - water</li>
-                        <li>1 tsp - vanilla extract</li>
-                    </ul>
+                <!---List of icing ingredients-->
+            <h4 class="icing hide-on-small">Icing Ingredients</h4>
+                <ul id="icingIngredients" class="icing hide-on-small">
+                    <li>8 oz - at least 70% cacao (I use chips, but you could use baking bars.)</li>
+                    <li>1 cup - heavy cream</li>
+                    <li>A couple of Tbsp of corn syrup or honey</li>
+                </ul>
 
-                    <!---List of icing ingredients-->
-                <h4>Icing Ingredients</h4>
-                    <ul id="icingIngredients" class="ingredients">
-                        <li>8 oz - at least 70% cacao (I use chips, but you could use baking bars.)</li>
-                        <li>1 cup - heavy cream</li>
-                        <li>A couple of Tbsp of corn syrup or honey</li>
-                    </ul>
-
-                    <!---List of toppings-->
-                <h4>Optional Toppings</h4>
-                    <ul id="toppings" class="toppings">
-                    </ul>
-                    <input type="text" id="toppingInput" placeholder="Sprinkles">
-                    <button id="addTopping" class="toppingButton">Add toppings</button>
+                <!---List of toppings-->
+            <h4 class="toppings hide-on-small">Optional Toppings</h4>
+                <ul id="toppings" class="toppings hide-on-small">
+                </ul>
+                <input type="text" id="toppingInput" class="toppings hide-on-small" placeholder="Sprinkles">
+                <button id="addTopping" class="toppings hide-on-small">Add toppings</button>
         </div>
 
         <div class="right col-12">
-            <div>
                 <!---List of cupcake instructions-->
-                <h4>Cupcake Instructions</h4>
-                    <ol id="cupcake-instructions" class="cupcake">
+                <h4 class="cupcake hide-on-small">Cupcake Instructions</h4>
+                    <ol id="cupcake-instructions" class="cupcake hide-on-small">
                         <li>Preheat oven to 350°F and place cupcake cups in the tin(s).</li>
                         <li>Wisk all of your dry ingredients (flour, cocoa, sugar, baking soda & powder, salt, and espresso) in a large bowl and set aside.</li>
                         <li>Using a hand mixer, mix oil, eggs, and vanilla together until well incorporated.</li>
@@ -114,8 +119,8 @@
                     </ol>
 
                 <!---List of filling instructions-->
-                <h4>Filling Instructions</h4>
-                    <ol id="filling-instructions" class="filling">
+                <h4 class="filling hide-on-small">Filling Instructions</h4>
+                    <ol id="filling-instructions" class="filling hide-on-small">
                         <li>Ensure the bowl and wisk of stand mixer are clean, dry, and completely grease free. Add egg whites and cream of tartar to bowl.</li>
                         <li>Add sugar, water, and corn syrup/honey to medium sauce pan on medium heat and wisk until sugar has dissolved. Insert a candy thermometer.</li>
                         <li><strong><b>IMPORTANT!</b></strong> Do not wisk after sugar has dissolved and mixture begins to bubble. This will cause sugar to crystalize.</li>
@@ -131,8 +136,8 @@
                     </ol>
 
                 <!---List of icing instructions-->
-                <h4>Icing Instructions</h4>
-                    <ol id="icing-instructions" class="icing">
+                <h4 class="icing hide-on-small">Icing Instructions</h4>
+                    <ol id="icing-instructions" class="icing hide-on-small">
                         <li>Once the cupcakes have cooled and been filled.</li>
                         <li>Chop the chocolate (unless using small chips) and place in a heatproof bowl. Add in honey or corn syrup.</li>
                         <li>In a small - medum sauce pan heat the heavy cream until just before it boils then pour over chocolate.</li>
@@ -140,7 +145,6 @@
                         <li>Dip filled cupcakes into the chocolate icing, using a spatula to smooth the top.</li>
                         <li>Using leftover filling and piping bag, decorate the top with loops.</li>
                     </ol>
-            </div>
 
             <div id ="otherRecipes" class="otherRecipes">
                 <!---Section for similar recipe links-->
