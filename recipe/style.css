@@ -97,20 +97,7 @@ input[type="checkbox"] {
     }
 }*/
 
-@media only screen and (max-width: 600px) {
-    .hide-on-small {
-        display: none;
-    }
-    #recipeImg, .description {
-        width: 70%;
-    }
-}
 
-@media only screen and (min-width: 601px) {
-    .hide-on-large {
-        display: none;
-    }
-}
 
 /*Styling for tabs and their content on smaller screens*/
 .tab {
@@ -148,3 +135,18 @@ input[type="checkbox"] {
   border-top: none;
 }
 /*End of styling for tabs and their content on smaller screens*/
+
+@media only screen and (max-width: 600px) {
+    .hide-on-small {
+        display: none;
+    }
+    #recipeImg, .description {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .hide-on-large {
+        display: none;
+    }
+}
