@@ -3,7 +3,8 @@ p {
 }
 
 body {
-    background-color: #0086af;
+    background: #2e85ff;
+    background: radial-gradient(circle, rgba(46, 133, 255, 1) 15%, rgba(0, 0, 255, 1) 80%);
     margin-left: 20px;
 }
 
@@ -57,7 +58,7 @@ ul, ol {
 }
 
 a {
-    color: purple;
+    color: #00D4FF;
     margin: 5px;
     padding: 5px;
 }
