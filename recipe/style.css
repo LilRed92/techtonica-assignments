@@ -45,7 +45,7 @@ ul, ol {
     float: left;
 }
 
-.top, .left {
+.top {
     margin-left: 20px;
 }
 
@@ -141,7 +141,7 @@ input[type="checkbox"] {
         display: none;
     }
     #recipeImg, .description {
-        width: 70%;
+        width: 90%;
     }
 }
 
