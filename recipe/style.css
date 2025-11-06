@@ -26,11 +26,6 @@ ul, ol {
     margin-bottom: 40px;
 }
 
-/*.navbar {
-    background: #FC0000;
-    background: linear-gradient(180deg, rgba(252, 0, 0, 1) 0%, rgba(250, 197, 198, 1) 40%, rgba(250, 197, 198, 1) 60%, rgba(252, 0, 0, 1) 100%);
-}*/
-
 .navbar {
     background: white;
     -webkit-mask: var(--mask);
