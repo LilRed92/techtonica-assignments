@@ -26,9 +26,10 @@ ul, ol {
     margin-bottom: 40px;
 }
 
-.nav-link{
-    color: white;
-}
+/*.navbar {
+    background: #FC0000;
+    background: linear-gradient(180deg, rgba(252, 0, 0, 1) 0%, rgba(250, 197, 198, 1) 40%, rgba(250, 197, 198, 1) 60%, rgba(252, 0, 0, 1) 100%);
+}*/
 
 .description {
     width: 600px;
@@ -135,6 +136,14 @@ input[type="checkbox"] {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
 /*End of styling for tabs and their content on smaller screens*/
 
 @media only screen and (max-width: 600px) {
