@@ -130,6 +130,7 @@ input[type="checkbox"] {
 
 .tab button {
   background-color: inherit;
+  color: red;
   float: left;
   border: none;
   outline: none;
@@ -140,12 +141,14 @@ input[type="checkbox"] {
 
 
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #ccc;
 }
 
 
 .tab button.active {
-  background-color: #ccc;
+  background: #FF0000;
+  background: linear-gradient(30deg, rgba(255, 0, 0, 1) 35%, rgba(0, 0, 255, 1) 100%);
+  color: white;
 }
 
 
