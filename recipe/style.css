@@ -31,6 +31,18 @@ ul, ol {
     background: linear-gradient(180deg, rgba(252, 0, 0, 1) 0%, rgba(250, 197, 198, 1) 40%, rgba(250, 197, 198, 1) 60%, rgba(252, 0, 0, 1) 100%);
 }*/
 
+.navbar {
+    background: white;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  --mask: radial-gradient(20px at 50% 20px,#0000 97%,#000) 50% -20px/ 35.50px 100%;
+
+}
+
+.nav-link:hover {
+    font-weight: 800;
+}
+
 .description {
     width: 600px;
     margin-top: 20px;
