@@ -80,8 +80,9 @@ input[type="checkbox"] {
     text-decoration: line-through;
 }
 
-.hidden {
-    display: none;
+.otherRecipes {
+    padding: 10px;
+    margin: 15px 10px 5px 10px;
 }
 
 /*@media only screen and (max-width: 600px) {
