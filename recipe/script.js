@@ -11,6 +11,27 @@ button.addEventListener('click', function() {
     toppingInput.value = '';
 })
 
+/////////////////////
+
+// Code for cupcake ingredients and instructions innerHTML
+const cupcakeIngredients = document.getElementById('cupcakeIngredients');
+cupcakeIngredients.innerHTML =
+`<h4>Cupcake Ingredients</h4>
+    <ul>
+        <li>1 and 3/4 cups - all-purpose flour</li>
+        <li>3/4 cup - unsweetened cocoa powder</li>
+        <li>1 and 3/4 cups - granulated sugar</li>
+        <li>2 tsp - baking soda</li>
+        <li>1 tsp - baking powder</li>
+        <li>1 tsp - salt</li>
+        <li>2 tsp - espresso powder</li>
+        <li>1/2 cup - vegetable oil (canola oil or melted coconut oil)</li>
+        <li>2 large eggs (room temperature)</li>
+        <li>2 tsp - pure vanilla extract</li>
+        <li>1 cup - buttermilk (room temperature) ** Note</li>
+        <li>1 cup - strong <strong>HOT</strong> coffee</li>
+    </ul>`;
+
 // Code for adding checkboxes to cupcake ingredients list items
 const cupcakeListItems = document.querySelectorAll('#cupcakeIngredients li');
 
