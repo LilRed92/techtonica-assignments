@@ -158,16 +158,13 @@ icingInstructions.innerHTML =
 </ol>`;
 
 
+/////////////////////
+
 // Code for tabs and their content to show on small screens
 function openRecipe(evt, recipeName) {
   // Declare all variables
-  let i, tabcontent, tablinks;
+  let i, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
 
   // Get all elements with class="tablinks" and remove the class "active"
   tablinks = document.getElementsByClassName("tablinks");
@@ -176,6 +173,41 @@ function openRecipe(evt, recipeName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(recipeName).style.display = "block";
+  recipeContent = document.getElementById(recipeName)
   evt.currentTarget.className += " active";
-}
+    
+  if (recipeName === 'Cupcake') {
+
+    cupcakeIngredients.classList.remove('hide-on-small');
+    cupcakeInstructions.classList.remove('hide-on-small');
+
+    fillingIngredients.classList.add('hide-on-small');
+    fillingInstructions.classList.add('hide-on-small');
+
+    icingIngredients.classList.add('hide-on-small');
+    icingInstructions.classList.add('hide-on-small');
+
+  } else if (recipeName === 'Filling') {
+    
+    fillingIngredients.classList.remove('hide-on-small');
+    fillingInstructions.classList.remove('hide-on-small');
+
+    cupcakeIngredients.classList.add('hide-on-small');
+    cupcakeInstructions.classList.add('hide-on-small');
+
+    icingIngredients.classList.add('hide-on-small');
+    icingInstructions.classList.add('hide-on-small');
+
+  } else {
+
+    icingIngredients.classList.remove('hide-on-small');
+    icingInstructions.classList.remove('hide-on-small');
+
+    cupcakeIngredients.classList.add('hide-on-small');
+    cupcakeInstructions.classList.add('hide-on-small');
+
+    fillingIngredients.classList.add('hide-on-small');
+    fillingInstructions.classList.add('hide-on-small');
+  }
+  
+};
