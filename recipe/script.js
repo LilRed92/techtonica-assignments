@@ -48,7 +48,21 @@ cupcakeListItems.forEach((li, index) => {
             li.classList.remove('checked');
         }
     })
-})
+});
+
+const cupcakeInstructions = document.getElementById('cupcakeInstructions');
+cupcakeInstructions.innerHTML =
+`<h4>Cupcake Instructions</h4>
+<ol>
+    <li>Preheat oven to 350°F and place cupcake cups in the tin(s).</li>
+    <li>Wisk all of your dry ingredients (flour, cocoa, sugar, baking soda & powder, salt, and espresso) in a large bowl and set aside.</li>
+    <li>Using a hand mixer, mix oil, eggs, and vanilla together until well incorporated.</li>
+    <li>Add the buttermilk and mix until combined.</li>
+    <li>Pour wet ingredients into the dry ingredients and carefully mix just until it gets a bit cakey.</li>
+    <li>Pour hot coffee in and carefully mix until the batter until there are no clumps. *Batter will be very runny!</li>
+    <li>Fill the cupcake tin(s) and bake for 15 minutes, checking every 5 minutes after if not fully cooked.</li>
+    <li>Place cupcakes somewhere to cool.</li>
+</ol>`;
 
 // Code for adding checkboxes to filling ingredients list items
 const fillingListItems = document.querySelectorAll('#fillingIngredients li');
