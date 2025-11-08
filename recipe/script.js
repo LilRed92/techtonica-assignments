@@ -157,6 +157,25 @@ icingInstructions.innerHTML =
     <li>Using leftover filling and piping bag, decorate the top with loops.</li>
 </ol>`;
 
+/////////////////////
+
+// Code for adding checkboxes to topping ingredients list items
+// const toppingsListItems = document.querySelectorAll('#toppings li');
+
+// toppingsListItems.forEach((li, index) => {
+//     const checkbox = document.createElement('input');
+//     checkbox.type = 'checkbox';
+//     checkbox.name = `item-${index}`;
+//     checkbox.id = `checkbox-${index}`;
+//     li.prepend(checkbox);
+//     checkbox.addEventListener('change', (event) => {
+//         if (event.target.checked) {
+//              li.classList.add('checked');
+//         } else {
+//             li.classList.remove('checked');
+//         }
+//     })
+// });
 
 /////////////////////
 
