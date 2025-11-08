@@ -64,6 +64,21 @@ cupcakeInstructions.innerHTML =
     <li>Place cupcakes somewhere to cool.</li>
 </ol>`;
 
+/////////////////////
+
+// Code for filling ingredients and instructions innerHTML
+const fillingIngredients = document.getElementById('fillingIngredients');
+fillingIngredients.innerHTML =
+`<h4>Filling Ingredients</h4>
+<ul>
+    <li>3 large egg <strong>whites</strong> (room temperature)</li>
+    <li>1/2 tsp - cream of tartar</li>
+    <li>3/4 cup - corn syrup or honey</li>
+    <li>3/4 cup - granulated sugar</li>
+    <li>1/3 cup - water</li>
+    <li>1 tsp - vanilla extract</li>
+</ul>`;
+
 // Code for adding checkboxes to filling ingredients list items
 const fillingListItems = document.querySelectorAll('#fillingIngredients li');
 
