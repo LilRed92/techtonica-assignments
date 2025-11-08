@@ -115,6 +115,17 @@ fillingInstructions.innerHTML =
     <li>Push tip of piping bag into each cupcake and fill until you barely see cupcake begin to expand.</li>
 </ol>`;
 
+/////////////////////
+
+// Code for icing ingredients and instructions innerHTML
+const icingIngredients = document.getElementById('icingIngredients');
+icingIngredients.innerHTML =
+`<h4>Icing Ingredients</h4>
+<ul>
+    <li>8 oz - at least 70% cacao (I use chips, but you could use baking bars.)</li>
+    <li>1 cup - heavy cream</li>
+    <li>A couple of Tbsp of corn syrup or honey</li>
+</ul>`;
 
 // Code for adding checkboxes to icing ingredients list items
 const icingListItems = document.querySelectorAll('#icingIngredients li');
