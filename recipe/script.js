@@ -143,7 +143,19 @@ icingListItems.forEach((li, index) => {
             li.classList.remove('checked');
         }
     })
-})
+});
+
+const icingInstructions = document.getElementById('icingInstructions');
+icingInstructions.innerHTML =
+`<h4>Icing Instructions</h4>
+<ol>
+    <li>Once the cupcakes have cooled and been filled.</li>
+    <li>Chop the chocolate (unless using small chips) and place in a heatproof bowl. Add in honey or corn syrup.</li>
+    <li>In a small - medum sauce pan heat the heavy cream until just before it boils then pour over chocolate.</li>
+    <li>Let chocolate and heavy cream sit, covered, for 5 minutes then mix with a wisk.</li>
+    <li>Dip filled cupcakes into the chocolate icing, using a spatula to smooth the top.</li>
+    <li>Using leftover filling and piping bag, decorate the top with loops.</li>
+</ol>`;
 
 
 // Code for tabs and their content to show on small screens
