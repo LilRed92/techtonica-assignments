@@ -1,11 +1,33 @@
 /*
-At least 3 style properties applied to text
-Border
-Use of columns
-Use of at least 1 ID
-Use of at least 3 web design patterns
-Override a CSS rule in your code in an obvious way at least once
-Change display property of at least 1 element
-Additional Requirements
-Have at least 1 style change for narrow, medium, and wide browser views
+ Link your styles.css file to index.html.
+
+ Style your text using at least 3 different properties.
+
+ Add and style a profile photo of yourself. Include a border.
+
+ Have some info in a second column
+
+ Use one "id" correctly.
+
+ Select 3 web design patterns to implement
+
+ Use your search bar at least once to jump to an element or style.
+
+ Have 2 CSS blocks that include the class "override" with one
+ overriding the other rule in an obvious way.
+
+ Change the display property of at least one element.
+
+
+Media Queries, UI, UX
+
+ Have at least one style change each for a narrow, medium, and wide browser window.
+
+ Use developer tools at least once to inspect your styles and check window width.
+
+ Make sure the User Interface of your site is appealing 
+ at all widths while keeping it simple.
+ 
+ Ask a peer to test your site and tell you about 
+ their experience. Change one thing that would provide better UX.
 */
