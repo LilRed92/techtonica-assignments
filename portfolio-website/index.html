@@ -31,21 +31,23 @@
 
     <section id="contactFormContainer">
         <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="number">Phone Number:</label>
-            <input type="number" id="pnumber">
+            <label for="name">Name:</label> <!--(required)-->
+            <input type="text" id="name" name="name"><!--(required)-->
 
-            <!--
-            Add a contact form with the following fields:
-            name (required)
-            email (required)
-            phone number (not required)
-            address (not required)
-            (Hint: Required fields in a form are those where you normally see a * symbol)
-            -->
+            <label for="email">Email:</label> <!--(required)-->
+            <input type="email" id="email" name="email"> <!--(required)-->
+
+            <label for="number">Phone Number:</label> <!--(not required)-->
+            <input type="number" id="number" name="number" value="10"> <!--(not required)-->
+
+            <label for="streetAddress">Street Address:</label><!--(not required)-->
+            <input type="text" id="streetAddress" name="streetAddress" autocomplete="street-address">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" autocomplete="address-level2">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" autocomplete="address-level1">
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" name="postalCode" autocomplete="postal-code">
             <!--    #  Form submission handler - mock API calls    -->
             <!--    #  Contact form with real-time validation   -->
             <!--    #  Form state management: disable submit while processing   -->
