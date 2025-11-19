@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Kacie Dearman's Portfolio</title>
 </head>
 <body>
@@ -40,14 +40,18 @@
             <label for="number">Phone Number:</label> <!--(not required)-->
             <input type="number" id="number" name="number" value="10"> <!--(not required)-->
 
-            <label for="streetAddress">Street Address:</label><!--(not required)-->
-            <input type="text" id="streetAddress" name="streetAddress" autocomplete="street-address">
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" autocomplete="address-level2">
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state" autocomplete="address-level1">
-            <label for="postalCode">Postal Code:</label>
-            <input type="text" id="postalCode" name="postalCode" autocomplete="postal-code">
+            <fieldset id="address">
+                <legend>Address</legend>
+                <label for="streetAddress">Street Address:</label><!--(not required)-->
+                <input type="text" id="streetAddress" name="streetAddress" autocomplete="street-address">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" autocomplete="address-level2">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" autocomplete="address-level1">
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" autocomplete="postal-code">
+            </fieldset>
+            
             <!--    #  Form submission handler - mock API calls    -->
             <!--    #  Contact form with real-time validation   -->
             <!--    #  Form state management: disable submit while processing   -->
@@ -59,10 +63,15 @@
     <section id="contact">
         <div id="contactInfo">
             <!--Contact information for yourself-->
+            <p id="email">kldearman@amarillo.com</p>
+            <p id="city">Amarillo, Texas USA</p>
         </div>
 
         <div id="socialAccts">
             <!--Links to social media accounts-->
+            <!--LinkedIn-->
+            <!--DEV-->
+            <a href="https://dev.to/lilred92"><i class="fa-brands fa-dev" style="color: #00d5ff;"></i></a>
         </div>
 
     </section>
