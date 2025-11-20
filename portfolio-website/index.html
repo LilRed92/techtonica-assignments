@@ -12,12 +12,11 @@
     <!--    #   String manipulation - truncate descriptions, slugify titles    -->
     <!--    #   Accessibility helpers - ARIA attribute generators    -->
 
-    <div id="intro">
-        <!--Photo-->
+    <header id="intro">
         <img src="/me.jpg" alt="Headshot image of a woman with red hair."/>
         <h1 id="fullName">Kacie Dearman</h1>
         <p id="description">Short description of my experience will go here.</p>
-    </div>
+    </header>
 
     <section id="experience">
         <!--
@@ -25,6 +24,29 @@
         and some past work experience that you 
         can apply to a tech job.
         -->
+
+        <div id="eduJobLeft" class="eduJob left">
+            <!--Techtonica-->
+            <!--Software Engineering-->
+            <!--2025 H2 Cohort-->
+        <!--Innovation Outpost-->
+            <!--Full-Stack Software Development-->
+            <!--February - May 2022-->
+        <!--Amarillo College-->
+            <!--Computer Systems Information-->
+            <!--January 2023 - Present-->
+
+        <!--Support.com-->
+        <!--Woodrell Retail and Investments-->
+        <!--Hair Designs by Kacie Dearman-->
+        </div>
+
+        <div id="projectsRight" class="projects right">
+
+        </div>
+
+        
+
     <!--    #   Project timeline: sortable by date, technology, or status   -->
     <!--    #	Date formatting utilities - display relative dates ("2 days ago")   -->
     <!--    #   Project search with autocomplete suggestions    -->
@@ -34,10 +56,10 @@
     <section id="contactFormContainer">
         <form id="contactForm">
             <label for="name">Name:</label> <!--(required)-->
-            <input type="text" id="name" name="name"><!--(required)-->
+            <input type="text" id="name" name="name" required><!--(required)-->
 
             <label for="email">Email:</label> <!--(required)-->
-            <input type="email" id="email" name="email"> <!--(required)-->
+            <input type="email" id="email" name="email" required> <!--(required)-->
 
             <label for="number">Phone Number:</label> <!--(not required)-->
             <input type="number" id="number" name="number" placeholder="xxx-xxx-xxxx"> <!--(not required)-->
