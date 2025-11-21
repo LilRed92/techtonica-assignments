@@ -31,12 +31,20 @@ Media Queries, UI, UX
  Ask a peer to test your site and tell you about 
  their experience. Change one thing that would provide better UX.
 */
-
+:root {
+  --c-dg: #2C2C2C;
+  --c-lb: #04CEE0;
+  --c-mb: #1AC1DD;
+  --c-pb: #017494;
+  --c-pr: #7917F8;
+  --c-hp: #FF0077;
+  --c-lg: #09BB00;
+}
 
 
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  background: #353D5B;
+  background: var(--c-dg);
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
@@ -80,7 +88,7 @@ body {
 }
 
 .timeline ul {
-  background: #353D5B;
+  background: var(--c-dg);
   padding: 50px 0;
 }
 
