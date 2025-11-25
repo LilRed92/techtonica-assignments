@@ -1,0 +1,400 @@
+/*
+ ***DONE Link your styles.css file to index.html.
+
+ Style your text using at least 3 different properties.
+
+ Add and style a profile photo of yourself. Include a border.
+
+ Have some info in a second column
+
+ ***DONE Use one "id" correctly.
+
+ Select 3 web design patterns to implement
+
+ Use your search bar at least once to jump to an element or style.
+
+ Have 2 CSS blocks that include the class "override" with one
+ overriding the other rule in an obvious way.
+
+ Change the display property of at least one element.
+
+
+Media Queries, UI, UX
+
+ Have at least one style change each for a narrow, medium, and wide browser window.
+
+ Use developer tools at least once to inspect your styles and check window width.
+
+ Make sure the User Interface of your site is appealing 
+ at all widths while keeping it simple.
+ 
+ Ask a peer to test your site and tell you about 
+ their experience. Change one thing that would provide better UX.
+*/
+:root {
+  --c-dg: #232323;
+  --c-mg: #2C2C2C;
+  --c-lb: #04CEE0;
+  --c-mb: #1AC1DD;
+  --c-pb: #017494;
+  --c-pr: #7917F8;
+  --c-hp: #FF0077;
+  --c-lg: #09BB00;
+}
+
+
+body {
+  font: normal 12px/1.5 "Helvetica Neue", sans-serif;
+  background: var(--c-dg);
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+#navbarNav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+/* HOME
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#intro {
+  margin-top: 20px;
+  padding: 20px;
+  width: 400px;
+  margin: auto;
+}
+
+#myImg {
+  padding: 15px;
+  margin-left: 20%;
+  clip-path: circle(50%);
+  border: 2px outset #14B2B5;
+  border-radius: 50%;
+}
+
+#fullName, #description {
+  text-align: center;
+}
+
+#description {
+  columns: 2 auto;
+  font-size: 11px;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timeline ul {
+  background: var(--c-dg);
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 3px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #5B627A;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #14B2B5;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #14B2B5 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #14B2B5;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #14B2B5;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div  {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #14B2B5 transparent transparent;
+  }
+}
+
+
+/* PROJECT PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body.project-page {
+  font-family: "Exo 2", sans-serif;
+	background: radial-gradient(circle at center, #0f172a, #020617);
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+
+
+
+/* PROJECT CAROUSEL & CARDS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.carousel-container {
+	width: 90%;
+	max-width: 1100px;
+	position: relative;
+	perspective: 2000px;
+	padding: 3rem 0;
+	z-index: 10;
+  margin-top: 20px;
+}
+
+.carousel-track {
+	display: flex;
+	transition: transform 0.75s cubic-bezier(0.21, 0.61, 0.35, 1);
+	transform-style: preserve-3d;
+}
+
+.card {
+	min-width: 320px;
+	max-width: 320px;
+	margin: 0 25px;
+  color: white;
+	background: linear-gradient(
+		135deg,
+		rgba(30, 41, 59, 0.85),
+		rgba(15, 23, 42, 0.9)
+	);
+	border-radius: 1.2rem;
+	overflow: hidden;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.2);
+	transition: all 0.6s cubic-bezier(0.21, 0.61, 0.35, 1);
+	transform-origin: center center;
+	position: relative;
+	border: 1px solid rgba(94, 234, 212, 0.2);
+}
+
+/* Holographic border effect */
+.carousel-card::before {
+	content: "";
+	position: absolute;
+	inset: -2px;
+	background: linear-gradient(
+		45deg,
+		transparent 0%,
+		var(--neon-blue) 25%,
+		var(--neon-green) 50%,
+		var(--neon-pink) 75%,
+		transparent 100%
+	);
+	z-index: -1;
+	border-radius: 1.3rem;
+	filter: blur(8px);
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	animation: borderGlow 6s linear infinite;
+}
+
+@keyframes borderGlow {
+	0% {
+		background-position: 0% 50%;
+		opacity: 0.3;
+	}
+	50% {
+		background-position: 100% 50%;
+		opacity: 0.5;
+	}
+	100% {
+		background-position: 0% 50%;
+		opacity: 0.3;
+	}
+}
+
+.carousel-card.is-active::before {
+	opacity: 1;
+	background-size: 300% 300%;
+}
+
+.carousel-card:not(.is-active) {
+	transform: scale(0.8) rotateY(35deg) translateZ(-100px);
+	opacity: 0.45;
+	filter: saturate(0.6) brightness(0.7);
+}
+
+.carousel-card.is-prev {
+	transform-origin: right center;
+	transform: scale(0.75) rotateY(45deg) translateX(-80px) translateZ(-150px);
+}
+
+.carousel-card.is-next {
+	transform-origin: left center;
+	transform: scale(0.75) rotateY(-45deg) translateX(80px) translateZ(-150px);
+}
+
+.carousel-card.is-active {
+	transform: scale(1) rotateY(0) translateZ(0);
+	opacity: 1;
+	z-index: 20;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px var(--glow-primary),
+		inset 0 0 20px rgba(56, 189, 248, 0.1);
+	filter: saturate(1.2) brightness(1.1);
+}
+
+.card-image-container {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(94, 234, 212, 0.3);
+}
+
+.card-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 1.5s ease;
+}
+
+.carousel-card.is-active .card-image {
+	transform: scale(1.05);
+}
+
+/* CONTACT PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#contact_content {
+  padding: 10px;
+  margin: 20px;
+}
+
+#contactFormContainer {
+  padding: 10px;
+  margin: 20px;
+  float: right;
+
+}
+
+#address {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+legend {
+  font-size: 12px;
+}
