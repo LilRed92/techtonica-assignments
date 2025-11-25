@@ -1,5 +1,5 @@
 /*
- Link your styles.css file to index.html.
+ ***DONE Link your styles.css file to index.html.
 
  Style your text using at least 3 different properties.
 
@@ -7,7 +7,7 @@
 
  Have some info in a second column
 
- Use one "id" correctly.
+ ***DONE Use one "id" correctly.
 
  Select 3 web design patterns to implement
 
@@ -32,7 +32,8 @@ Media Queries, UI, UX
  their experience. Change one thing that would provide better UX.
 */
 :root {
-  --c-dg: #2C2C2C;
+  --c-dg: #232323;
+  --c-mg: #2C2C2C;
   --c-lb: #04CEE0;
   --c-mb: #1AC1DD;
   --c-pb: #017494;
@@ -43,7 +44,7 @@ Media Queries, UI, UX
 
 
 body {
-  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  font: normal 12px/1.5 "Helvetica Neue", sans-serif;
   background: var(--c-dg);
   color: #fff;
   overflow-x: hidden;
@@ -61,6 +62,13 @@ body {
   padding: 5px 10px;
 }
 
+nav {
+  margin-bottom: 20px;
+}
+
+/* HOME
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 #intro {
   margin-top: 20px;
   padding: 20px;
@@ -72,13 +80,21 @@ body {
   padding: 15px;
   margin-left: 20%;
   clip-path: circle(50%);
+  border: 2px outset #14B2B5;
+  border-radius: 50%;
 }
 
 #fullName, #description {
   text-align: center;
 }
 
+#description {
+  columns: 2 auto;
+  font-size: 11px;
+}
 
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 *,
 *::before,
 *::after {
@@ -218,4 +234,167 @@ time {
     border-width: 8px 16px 8px 0;
     border-color: transparent #14B2B5 transparent transparent;
   }
+}
+
+
+/* PROJECT PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body.project-page {
+  font-family: "Exo 2", sans-serif;
+	background: radial-gradient(circle at center, #0f172a, #020617);
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+
+
+
+/* PROJECT CAROUSEL & CARDS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.carousel-container {
+	width: 90%;
+	max-width: 1100px;
+	position: relative;
+	perspective: 2000px;
+	padding: 3rem 0;
+	z-index: 10;
+  margin-top: 20px;
+}
+
+.carousel-track {
+	display: flex;
+	transition: transform 0.75s cubic-bezier(0.21, 0.61, 0.35, 1);
+	transform-style: preserve-3d;
+}
+
+.card {
+	min-width: 320px;
+	max-width: 320px;
+	margin: 0 25px;
+  color: white;
+	background: linear-gradient(
+		135deg,
+		rgba(30, 41, 59, 0.85),
+		rgba(15, 23, 42, 0.9)
+	);
+	border-radius: 1.2rem;
+	overflow: hidden;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.2);
+	transition: all 0.6s cubic-bezier(0.21, 0.61, 0.35, 1);
+	transform-origin: center center;
+	position: relative;
+	border: 1px solid rgba(94, 234, 212, 0.2);
+}
+
+/* Holographic border effect */
+.carousel-card::before {
+	content: "";
+	position: absolute;
+	inset: -2px;
+	background: linear-gradient(
+		45deg,
+		transparent 0%,
+		var(--neon-blue) 25%,
+		var(--neon-green) 50%,
+		var(--neon-pink) 75%,
+		transparent 100%
+	);
+	z-index: -1;
+	border-radius: 1.3rem;
+	filter: blur(8px);
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	animation: borderGlow 6s linear infinite;
+}
+
+@keyframes borderGlow {
+	0% {
+		background-position: 0% 50%;
+		opacity: 0.3;
+	}
+	50% {
+		background-position: 100% 50%;
+		opacity: 0.5;
+	}
+	100% {
+		background-position: 0% 50%;
+		opacity: 0.3;
+	}
+}
+
+.carousel-card.is-active::before {
+	opacity: 1;
+	background-size: 300% 300%;
+}
+
+.carousel-card:not(.is-active) {
+	transform: scale(0.8) rotateY(35deg) translateZ(-100px);
+	opacity: 0.45;
+	filter: saturate(0.6) brightness(0.7);
+}
+
+.carousel-card.is-prev {
+	transform-origin: right center;
+	transform: scale(0.75) rotateY(45deg) translateX(-80px) translateZ(-150px);
+}
+
+.carousel-card.is-next {
+	transform-origin: left center;
+	transform: scale(0.75) rotateY(-45deg) translateX(80px) translateZ(-150px);
+}
+
+.carousel-card.is-active {
+	transform: scale(1) rotateY(0) translateZ(0);
+	opacity: 1;
+	z-index: 20;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px var(--glow-primary),
+		inset 0 0 20px rgba(56, 189, 248, 0.1);
+	filter: saturate(1.2) brightness(1.1);
+}
+
+.card-image-container {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(94, 234, 212, 0.3);
+}
+
+.card-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 1.5s ease;
+}
+
+.carousel-card.is-active .card-image {
+	transform: scale(1.05);
+}
+
+/* CONTACT PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#contact_content {
+  padding: 10px;
+  margin: 20px;
+}
+
+#contactFormContainer {
+  padding: 10px;
+  margin: 20px;
+  float: right;
+
+}
+
+#address {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+legend {
+  font-size: 12px;
 }
