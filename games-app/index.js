@@ -1,4 +1,5 @@
 // (data) Create an array of dice (each dice has 6 letters)
+
 const dice = [
     "AEANEG",
     "WNGEEH",
@@ -56,7 +57,9 @@ function getDiceRollArray(diceCount) {
 
         return shuffleArray(lettersArray);
 
-};
+}
+
+
 
 
 // (index) Create a function that displays the dice on the board using DOM
@@ -67,6 +70,7 @@ function displayDice() {
 }
 
 displayDice();
+
 
 
 // Create a function that displays which dice are selected 
@@ -97,6 +101,7 @@ function selectDie() {
 // Create a function that checks #currentWord after #submitBtn
 // display word & it's score (3-4: 1; 5: 2; 6: 3; 7: 5; 8+: 11)
 // add word score to total points
+
 let totalPoints = 0;
 let totalHolder = document.getElementById("totalPoints");
 let scoreTable = document.getElementById("scoreTable");
@@ -134,7 +139,7 @@ function calculatePoints() {
         alert("Your word must be more than three characters long!");
     }
     
-};
+}
 
 // Display submitted word, it's score, and recalculate total score
 function playWord() {
@@ -152,7 +157,7 @@ submitBtn.addEventListener('click', playWord);
 
 
 // Reset Function, resets selections when reset button is clicked
-et resetBtn = document.getElementById("resetBtn");
+let resetBtn = document.getElementById("resetBtn");
 
 function resetWord() {
     currentWord = [];
