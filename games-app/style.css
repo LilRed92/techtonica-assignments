@@ -29,7 +29,7 @@ main {
     margin: auto;
     /*width:330vw;
     max-width: 5300px;*/
-    padding: 1vh 1vw;
+    /*padding: 1vh 1vw;*/
     font-size: 1.6rem;
     color: white;
     border-radius: 14px;
@@ -40,7 +40,15 @@ main {
     border: 0.2rem solid #000721;
     box-shadow: inset 0px 0px 6px 2px rgba(100,100,100,0.2),
                 0px 0px 10px rgba(117,182,214,0.2);
-    display: block;
+
+                 justify-content: center;
+  padding: 20px;
+  /*margin: 20px;*/
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+    
 }
 
 @media(min-width:550px){
@@ -53,11 +61,10 @@ main {
 
 #diceGrid {
     justify-content: center;
-  background-color: white;
   padding: 10px;
-  margin: 20px;
+  margin: 5px;
   width: 90%;
-  display: inline-block;
+  display: block;
 
 }
 
@@ -80,9 +87,8 @@ main {
     gap: .5rem;*/
      justify-content: center;
     display: grid;
-  grid-template-columns: 12vh 12vh 12vh 12vh;
-  grid-template-rows: 12vh 12vh 12vh 12vh;
-  background-color: dodgerblue;
+  grid-template-columns: 10vh 10vh 10vh 10vh;
+  grid-template-rows: 10vh 10vh 10vh 10vh;
   padding: 10px;
   margin: 20px;
   width: 90%;
@@ -118,13 +124,20 @@ main {
 }
 
 #wordInfo, #playerScore {
-    margin: 10px;
-    padding: 5px;
+    margin: 5px;
     width: 90%;
+    justify-content: center;
+    padding: 10px;
+    width: 90%;
+    height: auto;
 
     /*position: absolute;
     bottom:0;
     left:0px;
     right:0;
     background: #000721;*/
+}
+
+p, th, td {
+    font-size: 1rem;
 }
