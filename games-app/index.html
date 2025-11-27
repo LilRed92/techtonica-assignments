@@ -8,6 +8,36 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div id="gameContainer">
+            <section id="diceGrid">
+                <div id="dice">
+
+                </div>
+            </section>
+
+            <section id="wordInfo">
+                <div id="wordGuess">
+                    <p>Current Word:</p>
+                    <p id="currentWord"></p>
+                </div>
+                <button id="submitBtn">Submit</button>
+                <button id="resetBtn">Reset</button>
+            </section>
+
+            <section id="playerScore">
+                <table id="scoreTable">
+                    <tr>
+                        <th>Word</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td>Total:</td>
+                        <td id="totalPoints"></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </main>
      <script src="index.js"></script>
   </body>
 </html>
