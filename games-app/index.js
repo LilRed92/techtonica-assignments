@@ -71,7 +71,10 @@ function selectDie() {
 // Create a function that checks #currentWord after #submitBtn
 // display word & it's score (3-4: 1; 5: 2; 6: 3; 7: 5; 8+: 11)
 // add word score to total points
-
+let totalPoints = 0;
+let totalHolder = document.getElementById("totalPoints");
+let scoreTable = document.getElementById("scoreTable");
+let submitBtn = document.getElementById("submitBtn");
 
 // Calculate score
 
@@ -81,7 +84,17 @@ function selectDie() {
 
 
 // Reset Function, resets selections when reset button is clicked
+et resetBtn = document.getElementById("resetBtn");
 
+function resetWord() {
+    currentWord = [];
+    showCurrentWord.innerHTML = '';
+    for(let i = 0; i < displayedDice.length; i++) {
+       displayedDice[i].classList.remove('selected');
+   }
+}
+
+resetBtn.addEventListener('click', resetWord);
 
 ///// EXTRAS //////
 // Create a function that checks #currentWord after #submitBtn is 
