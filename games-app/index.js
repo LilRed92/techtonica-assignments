@@ -1,12 +1,47 @@
 // (data) Create an array of dice (each dice has 6 letters)
-
+const dice = [
+    "AEANEG",
+    "WNGEEH",
+    "AHSPCO",
+    "LNHNRZ",
+    "ASPFFK",
+    "TSTIYD",
+    "OBJOAB",
+    "OWTOAT",
+    "IOTMUC",
+    "ERTTYL",
+    "RYVDEL",
+    "TOESSI",
+    "LREIXD",
+    "TERWHV",
+    "EIUNES",
+    "NUIHMR"
+];
 
 // (utility) Create a function that "rolls" each dice and returns
 // a random possible letter from each dice
+let diceContainer = document.getElementById("dice");
+let diceCount = dice.length;
 
-
+function getDiceRollArray(diceCount) {
+  for (let i = 0; i < diceCount; i++) {
+   return new Array(diceCount).fill(0).map(function() {
+        let currentDie = dice[i].split('');
+        let diceRoll = Math.floor(Math.random() * 6);
+        let number = currentDie[diceRoll];
+        return number;
+    }) 
+  }
 
 // (index) Create a function that displays the dice on the board using DOM
+
+function displayDice() {
+    currentDiceScore = getDiceRollArray(diceCount)
+ 	diceContainer.innerHTML = currentDiceScore.map((number) =>
+ 		`<div class="dice">${number}</div>`).join("")
+}
+
+displayDice();
 
 
 // Create a function that displays which dice are selected 
