@@ -24,14 +24,25 @@ let diceContainer = document.getElementById("dice");
 let diceCount = dice.length;
 
 function getDiceRollArray(diceCount) {
-  for (let i = 0; i < diceCount; i++) {
-   return new Array(diceCount).fill(0).map(function() {
-        let currentDie = dice[i].split('');
-        let diceRoll = Math.floor(Math.random() * 6);
-        let number = currentDie[diceRoll];
-        return number;
-    }) 
-  }
+//   for (let i = 0; i < diceCount; i++) {
+//    return new Array(diceCount).fill(0).map(function() {
+//         let currentDie = dice[i].split('');
+//         let diceRoll = Math.floor(Math.random() * 6);
+//         let number = currentDie[diceRoll];
+//         return number;
+//     }) 
+//   }
+        const lettersArray = dice.map(function(die) {
+            let currentDie = die.split('');
+            let diceRoll = Math.floor(Math.random() * 6);
+            let number = currentDie[diceRoll];
+            return number;
+        });
+
+        return shuffleArray(lettersArray);
+
+};
+
 
 // (index) Create a function that displays the dice on the board using DOM
 function displayDice() {
