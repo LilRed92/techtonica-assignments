@@ -23,6 +23,21 @@ const dice = [
 let diceContainer = document.getElementById("dice");
 let diceCount = dice.length;
 
+//======*** Randomize dice within board ***=======//
+//====================******=====================//
+function shuffleArray(input) {
+    if (Math.random() < .5) {
+        return input;
+    } else {
+        return input.reverse();
+    }
+}
+//========*** NOTE ***==========//
+//===========******=============//
+// The above function could also use the .slice() and .concat()
+// methods along with Math.random() to slice dice at a random 
+// index and rejoin together randomly. 
+
 function getDiceRollArray(diceCount) {
 //   for (let i = 0; i < diceCount; i++) {
 //    return new Array(diceCount).fill(0).map(function() {
