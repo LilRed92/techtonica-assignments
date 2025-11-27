@@ -34,7 +34,6 @@ function getDiceRollArray(diceCount) {
   }
 
 // (index) Create a function that displays the dice on the board using DOM
-
 function displayDice() {
     currentDiceScore = getDiceRollArray(diceCount)
  	diceContainer.innerHTML = currentDiceScore.map((number) =>
@@ -46,7 +45,28 @@ displayDice();
 
 // Create a function that displays which dice are selected 
 // and adds the letters (in selected order) to the #currentWord
+let currentWord = [];
+let showCurrentWord = document.getElementById("currentWord");
+let displayedDice = document.getElementsByClassName("dice");
 
+for (let i = 0; i < displayedDice.length; i++) {
+    displayedDice[i].addEventListener('click', selectDie);
+}
+
+function selectDie() {
+    if (!this.classList.contains('selected')) {
+        this.classList.add('selected');
+        currentWord.push(this.innerHTML);
+    } else {
+        this.classList.remove('selected');
+        currentWord.pop(this.innerHTML);
+        //currentWord.splice(i, 1);
+    }
+
+    let wordDisplay = currentWord.join('');
+    showCurrentWord.innerHTML = wordDisplay
+}
+ 
 
 // Create a function that checks #currentWord after #submitBtn
 // display word & it's score (3-4: 1; 5: 2; 6: 3; 7: 5; 8+: 11)
