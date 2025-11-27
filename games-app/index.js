@@ -77,7 +77,38 @@ let scoreTable = document.getElementById("scoreTable");
 let submitBtn = document.getElementById("submitBtn");
 
 // Calculate score
-
+function calculatePoints() {
+    let p = currentWord.length;
+    if (p > 2) {
+        switch(true) {
+        case (p === 3 || p === 4):
+            points = 1;
+            totalPoints += points;
+            break;
+        case (p === 5):
+            points = 2;
+            totalPoints += points;
+            break;
+        case (p === 6):
+            points = 3;
+            totalPoints += points;
+            break;
+        case (p === 7):
+            points = 5;
+            totalPoints += points;
+            break;
+        case (p > 7):
+            points = 11;
+            totalPoints += points;
+            break;
+        default:
+            points = 0;
+    }
+    } else {
+        alert("Your word must be more than three characters long!");
+    }
+    
+};
 
 // Display submitted word, it's score, and recalculate total score
 
