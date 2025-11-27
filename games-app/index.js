@@ -111,7 +111,18 @@ function calculatePoints() {
 };
 
 // Display submitted word, it's score, and recalculate total score
+function playWord() {
+    calculatePoints();
+    let row = scoreTable.insertRow(1);
+    let wordCell = row.insertCell(0);
+    let pointsCell = row.insertCell(1);
+    wordCell.innerHTML = currentWord.join('');
+    pointsCell.innerHTML = points;
+    totalHolder.innerHTML = totalPoints;
+    resetWord();
+}
 
+submitBtn.addEventListener('click', playWord);
 
 
 // Reset Function, resets selections when reset button is clicked
