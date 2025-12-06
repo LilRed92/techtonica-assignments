@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kacie's Boggle Game</title>
     <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
   <body>
     <main>
         <h1>Boggle Game</h1>
@@ -19,8 +21,8 @@
 
             <section id="wordInfo">
                 <div id="wordGuess">
-                    <p>Current Word:</p>
-                    <p id="currentWord"></p>
+                    <p class="word">Current Word:</p>
+                    <p id="currentWord" class="currentWord"></p>
                 </div>
                 <button id="submitBtn">Submit</button>
                 <button id="resetBtn">Reset</button>
@@ -33,7 +35,7 @@
                         <th>Score</th>
                     </tr>
                     <tr>
-                        <td>Total:</td>
+                        <td id="total" class="total">Total:</td>
                         <td id="totalPoints"></td>
                     </tr>
                 </table>

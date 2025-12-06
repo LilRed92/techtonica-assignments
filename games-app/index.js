@@ -56,16 +56,18 @@ function getDiceRollArray(diceCount) {
         });
 
         return shuffleArray(lettersArray);
-
+        
 }
 
+
+let currentDiceArray = getDiceRollArray(diceCount)
 
 
 
 // (index) Create a function that displays the dice on the board using DOM
 function displayDice() {
-    currentDiceScore = getDiceRollArray(diceCount)
- 	diceContainer.innerHTML = currentDiceScore.map((number) =>
+    
+ 	diceContainer.innerHTML = currentDiceArray.map((number) =>
  		`<div class="dice">${number}</div>`).join("")
 }
 
@@ -77,24 +79,81 @@ displayDice();
 // and adds the letters (in selected order) to the #currentWord
 let currentWord = [];
 let showCurrentWord = document.getElementById("currentWord");
-let displayedDice = document.getElementsByClassName("dice");
+//let displayedDice = document.getElementsByClassName("dice");
+let displayedDice = document.querySelectorAll('.dice')
 
-for (let i = 0; i < displayedDice.length; i++) {
-    displayedDice[i].addEventListener('click', selectDie);
-}
 
-function selectDie() {
-    if (!this.classList.contains('selected')) {
-        this.classList.add('selected');
-        currentWord.push(this.innerHTML);
+let lastSelectedIndex = null
+
+displayedDice.forEach(die => {
+        die.addEventListener('click', (event) => {
+            let nextSelectedIndex = Array.from(displayedDice).indexOf(event.target);
+            if (lastSelectedIndex === null) {
+                lastSelectedIndex = nextSelectedIndex;
+                selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex - 5) {
+                lastSelectedIndex = nextSelectedIndex;
+                selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex - 4) {
+                lastSelectedIndex = nextSelectedIndex;
+                selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex - 3) {
+                 lastSelectedIndex = nextSelectedIndex;
+                 selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex - 1) {
+                 lastSelectedIndex = nextSelectedIndex;
+                 selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex + 1) {
+                 lastSelectedIndex = nextSelectedIndex;
+                 selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex + 3) {
+                 lastSelectedIndex = nextSelectedIndex;
+                 selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex + 4) {
+                 lastSelectedIndex = nextSelectedIndex;
+                 selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex + 5) {
+                 lastSelectedIndex = nextSelectedIndex;
+                 selectDie(die);
+
+            } else if (nextSelectedIndex === lastSelectedIndex) {
+                selectDie(die);
+                lastSelectedIndex = null;
+            } else {
+                alert("You must select an adjacent die.");
+            }
+            
+        });
+    });
+
+
+// for (let i = 0; i < displayedDice.length; i++) {
+//     displayedDice[i].addEventListener('click', selectDie);
+    
+// }
+
+function selectDie(die) {
+
+        if (!die.classList.contains('selected')) {
+        die.classList.add('selected');
+        currentWord.push(die.innerHTML);
+
     } else {
-        this.classList.remove('selected');
-        currentWord.pop(this.innerHTML);
+        die.classList.remove('selected');
+        currentWord.pop(die.innerHTML);
         //currentWord.splice(i, 1);
     }
 
     let wordDisplay = currentWord.join('');
-    showCurrentWord.innerHTML = wordDisplay
+    showCurrentWord.innerHTML = wordDisplay;  
 }
  
 
@@ -141,6 +200,10 @@ function calculatePoints() {
     
 }
 
+// Create a function to add previously guessed words to.
+guessedWords = [];
+
+
 // Display submitted word, it's score, and recalculate total score
 function playWord() {
     calculatePoints();
@@ -150,8 +213,17 @@ function playWord() {
     wordCell.innerHTML = currentWord.join('');
     pointsCell.innerHTML = points;
     totalHolder.innerHTML = totalPoints;
-    resetWord();
+
+    if (guessedWords.includes(wordCell.innerHTML)) {
+        alert("That word has already been guessed, please choose another word.")
+    } else {
+        guessedWords.push(wordCell.innerHTML);
+        resetWord();
+        lastSelectedIndex = null;
+    }
 }
+
+
 
 submitBtn.addEventListener('click', playWord);
 
@@ -174,3 +246,4 @@ resetBtn.addEventListener('click', resetWord);
 // clicked against a dictionary of words.
 
 // Allows selection of ONLY adjacent dice.
+// 
