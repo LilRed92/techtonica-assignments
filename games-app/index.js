@@ -19,13 +19,16 @@ const dice = [
     "NUIHMR"
 ];
 
-// (utility) Create a function that "rolls" each dice and returns
-// a random possible letter from each dice
+/*****************************************************************************
+ *      (UTILITY) CREATE A FUNCTION THAT "ROLLS" EACH DICE AND RETURNS     *
+ *  A RANDOM POSSIBLE LETTER FROM EACH DICE && RANDOMIZE DICE WITHIN BOARD *
+ *****************************************************************************/
 let diceContainer = document.getElementById("dice");
 let diceCount = dice.length;
 
-//======*** Randomize dice within board ***=======//
-//====================******=====================//
+/********************************************************
+ * //======*** RANDOMIZE DICE WITHIN BOARD ***=======// * 
+ ********************************************************/
 function shuffleArray(input) {
     if (Math.random() < .5) {
         return input;
@@ -33,21 +36,20 @@ function shuffleArray(input) {
         return input.reverse();
     }
 }
-//========*** NOTE ***==========//
-//===========******=============//
-// The above function could also use the .slice() and .concat()
-// methods along with Math.random() to slice dice at a random 
-// index and rejoin together randomly. 
+/*******************************************************************
+ *               ========*** NOTE ***==========                *
+ *               ===========******=============                *
+ *  THE ABOVE FUNCTION COULD ALSO USE THE .SLICE() AND .CONCAT() *
+ *   METHODS ALONG WITH MATH.RANDOM() TO SLICE DICE AT A RANDOM  *
+ *              INDEX AND REJOIN TOGETHER RANDOMLY.              *
+ *******************************************************************/
 
+/*******************************************
+ *      "ROLLS" EACH DICE AND RETURNS      *
+ * A RANDOM POSSIBLE LETTER FROM EACH DICE *
+ *******************************************/
 function getDiceRollArray(diceCount) {
-//   for (let i = 0; i < diceCount; i++) {
-//    return new Array(diceCount).fill(0).map(function() {
-//         let currentDie = dice[i].split('');
-//         let diceRoll = Math.floor(Math.random() * 6);
-//         let number = currentDie[diceRoll];
-//         return number;
-//     }) 
-//   }
+
         const lettersArray = dice.map(function(die) {
             let currentDie = die.split('');
             let diceRoll = Math.floor(Math.random() * 6);
@@ -59,12 +61,11 @@ function getDiceRollArray(diceCount) {
         
 }
 
-
+/******************************************************************************
+ * // (INDEX) CREATE A FUNCTION THAT DISPLAYS THE DICE ON THE BOARD USING DOM *
+ ******************************************************************************/
 let currentDiceArray = getDiceRollArray(diceCount)
 
-
-
-// (index) Create a function that displays the dice on the board using DOM
 function displayDice() {
     
  	diceContainer.innerHTML = currentDiceArray.map((number) =>
@@ -75,15 +76,17 @@ displayDice();
 
 
 
-// Create a function that displays which dice are selected 
-// and adds the letters (in selected order) to the #currentWord
+/************************************************************************
+ * /******************************************************************* *
+ *  *    CREATE A FUNCTION THAT DISPLAYS WHICH DICE ARE SELECTED    *   *
+ *    * AND ADDS THE LETTERS (IN SELECTED ORDER) TO THE #CURRENTWORD    *
+ *              * ALLOWS SELECTION OF ONLY ADJACENT DICE.*              *
+/************************************************************************/
 let currentWord = [];
 let showCurrentWord = document.getElementById("currentWord");
-//let displayedDice = document.getElementsByClassName("dice");
 let displayedDice = document.querySelectorAll('.dice')
-
-
 let lastSelectedIndex = null
+
 
 displayedDice.forEach(die => {
         die.addEventListener('click', (event) => {
@@ -244,6 +247,3 @@ resetBtn.addEventListener('click', resetWord);
 ///// EXTRAS //////
 // Create a function that checks #currentWord after #submitBtn is 
 // clicked against a dictionary of words.
-
-// Allows selection of ONLY adjacent dice.
-// 
