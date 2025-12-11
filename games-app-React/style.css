@@ -1,0 +1,219 @@
+html, body {
+    padding: 0;
+    margin: 0;    
+    background: rgb(51,43,55);
+    background: radial-gradient(circle, rgba(51,43,55,1) 0%, rgba(51,43,55,1) 100%);
+    font-family: "National Park", sans-serif;
+}
+
+main {
+    /*display:flex;
+    flex-direction: row;
+    align-items: center;*/
+    margin-top: .5rem;
+    justify-content: center;
+    text-align: center;
+} 
+
+@media(min-width:550px){
+   main {
+        flex-direction: row;
+        margin:6vh 5vw;
+        justify-content: center;
+        width:86vw;
+        gap: 2rem;
+    } 
+}
+
+#gameContainer {
+    /*height:75rem;*/
+    /*display: inline-block;*/
+    margin-top: .5rem;
+    margin: auto;
+    /*width:330vw;
+    max-width: 5300px;*/
+    /*padding: 1vh 1vw;*/
+    font-size: 1.6rem;
+    color: black;
+    border-radius: 14px;
+    position: relative;
+    background: #29C7EF;
+    text-align: center;
+    overflow: hidden;
+    border: 0.2rem solid #000721;
+    box-shadow: inset 0px 0px 6px 2px rgba(100,100,100,0.2),
+                0px 0px 10px rgba(117,182,214,0.2);
+
+                 /*justify-content: center;*/
+  padding: 20px;
+  /*margin: 20px;*/
+  /*width: 90%;*/
+  /*height: 90%;*/
+  display: flex;
+  flex-direction: column;
+    
+}
+
+@media(min-width:550px){
+    #gameContainer {
+        border: 0.2rem solid #000721;
+        width:37vw;
+    }
+}
+
+
+#dice {
+    /*width:100%;
+    height:70%;
+    position: absolute;
+    bottom:0;
+    left:0px;
+    right:0;
+    background: #000721;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+     grid-template-rows: auto auto auto auto;
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;*/
+     justify-content: center;
+    display: grid;
+  grid-template-columns: 10vh 10vh 10vh 10vh;
+  grid-template-rows: 10vh 10vh 10vh 10vh;
+  padding: 10px;
+  margin: 20px;
+  /*width: 90%;*/
+  /*height: auto;*/
+}
+
+@media(min-width:550px){
+    #diceGrid {
+        height: 30%;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+}
+
+.dice{
+    height:5.5vh;
+    width:5.5vh;
+    padding: 8px;
+    background: #fff;   
+    border-radius: 5px;
+    border:1px solid #666;
+    color:black;
+    text-align: center;
+    line-height: 6vh;
+    font-weight: 600;
+}
+
+@media(min-width:550px){
+#diceGrid.dice{
+    height:10vh;
+    width:10vh;
+    line-height: 10.5vh;
+}
+}c
+
+#wordInfo, #playerScore {
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    /*width: 90%;*/
+    /*height: auto;*/
+
+    /*position: absolute;
+    bottom:0;
+    left:0px;
+    right:0;
+    background: #000721;*/
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 900;
+    color: white;
+    text-shadow:
+        3px 3px 4px #FF6A25,
+        -3px 3px 4px #FF6A25,
+        -3px -3px 4px #FF6A25,
+        3px -3px 4px #FF6A25;
+}
+
+#wordGuess {
+
+}
+
+#wordGuess p.word {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    margin: auto;
+}
+
+#wordGuess p.currentWord {
+    font-size: 14px;
+    padding: 10px;
+    margin: auto;
+}
+
+#scoreTable th {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#scoreTable td {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#scoreTable td.total, #scoreTable td.totalPoints {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+button {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    /*background: #FF6A25;*/
+    background: #ffaf8a;
+    background: radial-gradient(rgba(255, 150, 102, 1) 5%, rgba(255, 106, 37, 1) 55%);
+    color: white;
+    border: .5px solid #b14b29;
+    box-shadow: inset 0px 0px 7px 2px rgba(76, 76, 76, 0.6);
+    /*box-shadow: inset   rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+                        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px ;*/
+
+}
+
+button:focus {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    background: #FF6A25;
+    color: white;
+    border: .5px solid #FB5017;
+    box-shadow: inset 0px 0px 6px 2px rgba(100,100,100,0.2),
+                0px 0px 10px rgba(117,182,214,0.2);
+
+}
+
+button:hover {
+    /*background: #EE2221;*/
+    background: #ff9999;
+    background: radial-gradient(rgba(255, 153, 153, 1) 16%, rgba(238, 34, 33, 1) 85%);
+    color: black;
+    border: 2px solid #A50202;
+    
+
+}
+
+.selected {
+    background: #FF8B1F;
+}
