@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kacie's Boggle Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+  <body>
+    <main>
+        <h1>Boggle Game</h1>
+        <div id="gameContainer">
+            <section id="dice">
+                <!--<div id="dice">
+
+                </div>-->
+            </section>
+
+            <section id="wordInfo">
+                <div id="wordGuess">
+                    <p class="word">Current Word:</p>
+                    <p id="currentWord" class="currentWord"></p>
+                </div>
+                <button id="submitBtn">Submit</button>
+                <button id="resetBtn">Reset</button>
+            </section>
+
+            <section id="playerScore">
+                <table id="scoreTable">
+                    <tr>
+                        <th>Word</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td id="total" class="total">Total:</td>
+                        <td id="totalPoints"></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <!--<div id="dice">
+            <button onclick="loadWordsIntoTrie()">Load Words</button>
+            <p id="status">Trie status: Empty</p>
+        </div>--> 
+    
+    </main>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="trie.js"></script>
+  </body>
+</html>
