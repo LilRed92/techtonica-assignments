@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const badges = '![Vite](https://img.shields.io/badge/Vite-React-blue)';
 const emojis = '🎮🟩🟦🟥🟨';
