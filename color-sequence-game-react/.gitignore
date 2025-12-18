@@ -1,0 +1,60 @@
+# ───────────────────────────────
+# Vite + React Game Project
+# .gitignore
+# ───────────────────────────────
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Cache folders
+.cache/
+.vite/
+vite-cache/
+.eslintcache
+
+# Coverage output
+coverage/
+
+# Temporary files
+temp/
+tmp/
+
+# local settings
+*.local.*
+
+# optional: ignore lockfiles if team prefers
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
