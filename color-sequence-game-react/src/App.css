@@ -11,3 +11,9 @@ body {
   h1,h2,h3 {
   margin:0.5rem0;
   }
+
+  .app-main {
+    text-align: center;
+    padding: 2rem;
+    
+  }
