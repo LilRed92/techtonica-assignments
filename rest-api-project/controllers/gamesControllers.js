@@ -1,39 +1,44 @@
+import { pool } from '../index.js';
 import { v4 as uuidv4 } from 'uuid';
 
 
-let users = [];
+let games = [];
 
-export const getUsers = (req, res) => {
-    res.send(users);
+export const getGames = async (req, res) => {
+    const client = await pool.connect(); 
+    const contactsTable = await client.query('SELECT * FROM best_games');
+    res.json(contactsTable.rows);
+    client.release();
+    console.log('GET QUERY OF GAMES IS WORKING')
 };
 
-export const createUser = (req, res) => {
-    const user = req.body;
-    users.push({ ...user, id: uuidv4() });
-    res.send(`User with the name ${user.fname} added to the DB.`);
+export const createGame = (req, res) => {
+    const game = req.body;
+    games.push({ ...game, id: uuidv4() });
+    res.send(`game with the name ${game.fname} added to the DB.`);
 };
 
-export const getUser = (req, res) => {
+export const getGame = (req, res) => {
     const { id } = req.params;
-    const foundUser = users.find((user) => user.id === id);
-    res.send(foundUser);
+    const foundGame = games.find((game) => game.id === id);
+    res.send(foundGame);
 };
 
-export const deleteUser = (req, res) =>{
+export const deleteGame = (req, res) =>{
     const { id } = req.params;
-    users = users.filter((user) => user.id != id);
-    res.send(`User with the id ${id} has been deleted.`)
+    games = games.filter((game) => game.id != id);
+    res.send(`Game with the id ${id} has been deleted.`)
 };
 
-export const updateUser = (req, res) => {
+export const updateGame = (req, res) => {
     const { id } = req.params;
     const { fname, lname, age } = req.body;
 
-    const user = users.find((user) => user.id === id);
+    const game = games.find((game) => game.id === id);
 
-    if(fname) user.fname = fname;
-    if(lname) user.lname = lname;
-    if(age) user.age = age;
+    if(fname) game.fname = fname;
+    if(lname) game.lname = lname;
+    if(age) game.age = age;
     
-    res.send(`User with the id ${id} has been updated.`);
+    res.send(`Game with the id ${id} has been updated.`);
 };

@@ -1,20 +1,20 @@
 import express from 'express';
-import { getUsers, createUser, getUser, deleteUser, updateUser  } from '../controllers/gamesControllers.js';
+import { getGames, createGame, getGame, deleteGame, updateGame  } from '../controllers/gamesControllers.js';
 
 
 
 const router = express.Router();
 
 
-router.get('/', getUsers);
+router.get('/games_api/best_games', getGames);
 
-router.post('/', createUser);
+router.post('/', createGame);
 
-router.get('/:id', getUser);
+router.get('/games_api/best_games/:id', getGame);
 
-router.delete('/:id', deleteUser);
+router.delete('/games_api/best_games/:id', deleteGame);
 
-router.patch('/:id', updateUser);
+router.patch('/games_api/best_games/:id', updateGame);
 
 
 export default router
