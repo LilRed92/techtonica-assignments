@@ -17,7 +17,7 @@ export const pool = new Pool({
     port: 5432,
 });
 
-app.use('/bestGames', gamesRouter);
+app.use('/games_api/best_games/', gamesRouter);
 
 app.get('/', (req, res) => res.send('Hello from homepage.'));
 

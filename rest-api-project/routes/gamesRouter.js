@@ -6,9 +6,9 @@ import { getGames, createGame, getGame, deleteGame, updateGame  } from '../contr
 const router = express.Router();
 
 
-router.get('/games_api/best_games', getGames);
+router.get('games_api/best_games', getGames);
 
-router.post('/', createGame);
+router.post('/games_api/best_games/:id', createGame);
 
 router.get('/games_api/best_games/:id', getGame);
 
