@@ -6,15 +6,15 @@ import { getGames, createGame, getGame, deleteGame, updateGame  } from '../contr
 const router = express.Router();
 
 
-router.get('games_api/best_games', getGames);
+router.get('/', getGames);
 
-router.post('/games_api/best_games/:id', createGame);
+router.post('/:id', createGame);
 
-router.get('/games_api/best_games/:id', getGame);
+router.get('/:id', getGame);
 
-router.delete('/games_api/best_games/:id', deleteGame);
+router.delete('/:id', deleteGame);
 
-router.patch('/games_api/best_games/:id', updateGame);
+router.patch('/:id', updateGame);
 
 
 export default router
