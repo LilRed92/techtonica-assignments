@@ -1,0 +1,961 @@
+const GAMES = [ {
+    "Game Title" : "The Legend of Zelda: Ocarina of Time",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time/",
+    "Release Date" : "11/23/1998",
+    "Rating" : "Rated E",
+    "Description" : "As a young boy, Link is tricked by Ganondorf, the King of the Gerudo Thieves. The evil human uses Link to gain access to the Sacred Realm, where he places his tainted hands on Triforce and transforms the beautiful Hyrulean landscape into a barren wasteland. Link is determined to fix the problems he helped to create, so with the help of Rauru he travels through time gathering the powers of the Seven Sages.",
+    "Metascore (Max 100)" : "99",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/f44777c3f75c89d59bbde78fdc9592a6ba87c662/catalog/provider/6/3/6-1-4763-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/32e0a7f3e8a36d4a12553d053b4f429a2cc1f3c3/catalog/provider/6/3/6-1-4763-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "SoulCalibur",
+    "Game URL" : "https://www.metacritic.com/game/soulcalibur/",
+    "Release Date" : "09/08/1999",
+    "Rating" : "Rated T",
+    "Description" : "This is a tale of souls and swords, transcending the world and all its history, told for all eternity... The greatest weapons-based fighter returns, this time on Sega Dreamcast. Soul Calibur unleashes incredible graphics, fantastic fighters, and combos so amazing they'll make your head spin!",
+    "Metascore (Max 100)" : "98",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/2dcdf7755e2f93ea10ed4510dc232b4759ade596/catalog/provider/6/3/6-1-7379-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/0a5ee80dcd6deb31c8c7b629832bf034a952726f/catalog/provider/6/3/6-1-7379-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grand Theft Auto IV",
+    "Game URL" : "https://www.metacritic.com/game/grand-theft-auto-iv/",
+    "Release Date" : "04/29/2008",
+    "Rating" : "Rated M",
+    "Description" : "[Metacritic's 2008 Xbox 360 Game of the Year; Also known as \"GTA IV\"] What does the American Dream mean today? For Niko Belic, fresh off the boat from Europe. It's the hope he can escape his past. For his cousin, Roman, it is the vision that together they can find fortune in Liberty City, gateway to the land of opportunity. As they slip into debt and are dragged into a criminal underworld by a series of shysters, thieves and sociopaths, they discover that the reality is very different from the dream in a city that worships money and status, and is heaven for those who have them an a living nightmare for those who don't. [Rockstar Games]",
+    "Metascore (Max 100)" : "98",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b8858ec309c5de12a7235b5ea9d14fc75cfba00b/catalog/provider/6/12/6-1-76228-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/ea221e31706ec302498c1225e48320b2c0cba46d/catalog/provider/6/12/6-1-76228-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Super Mario Galaxy",
+    "Game URL" : "https://www.metacritic.com/game/super-mario-galaxy/",
+    "Release Date" : "11/12/2007",
+    "Rating" : "Rated E",
+    "Description" : "[Metacritic's 2007 Wii Game of the Year] The ultimate Nintendo hero is taking the ultimate step ... out into space. Join Mario as he ushers in a new era of video games, defying gravity across all the planets in the galaxy. When some creature escapes into space with Princess Peach, Mario gives chase, exploring bizarre planets all across the galaxy. Mario, Peach and enemies new and old are here. Players run, jump and battle enemies as they explore all the planets in the galaxy. Since this game makes full use of all the features of the Wii Remote, players have to do all kinds of things to succeed: pressing buttons, swinging the Wii Remote and the Nunchuk, and even pointing at and dragging things with the pointer. Since he's in space, Mario can perform mind-bending jumps unlike anything he's done before. He'll also have a wealth of new moves that are all based around tilting, pointing and shaking the Wii Remote. Shake, tilt and point! Mario takes advantage of all the unique aspects of the Wii Remote and Nunchuk controller, unleashing new moves as players shake the controller and even point at and drag items with the pointer. [Nintendo]",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/9cffda2cf7726e8ce6b96a3b450958487d82073b/catalog/provider/6/3/6-1-55597-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/866a8bcfd788728cc388cd8c71f3bc8a95a6173c/catalog/provider/6/3/6-1-55597-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Super Mario Galaxy 2",
+    "Game URL" : "https://www.metacritic.com/game/super-mario-galaxy-2/",
+    "Release Date" : "05/23/2010",
+    "Rating" : "Rated E",
+    "Description" : "Super Mario Galaxy 2, the sequel to the galaxy-hopping original game, includes the gravity-defying, physics-based exploration from the first game, but is loaded with entirely new galaxies and features to challenge players. On some stages, Mario can pair up with his dinosaur buddy Yoshi and use his tongue to grab items and spit them back at enemies. Players can also have fun with new items such as a drill that lets our hero tunnel through solid rock. [Nintendo]",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/67badd021841f980b13e3ece56d830b3c62ccef6/catalog/provider/6/3/6-1-595362-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/d4ed30759bfa322a4789fa30a145f959b16f43f4/catalog/provider/6/3/6-1-595362-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: Breath of the Wild",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-breath-of-the-wild/",
+    "Release Date" : "03/03/2017",
+    "Rating" : "Rated E10+",
+    "Description" : "Ignore everything you know about The Legend of Zelda games. Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild. Travel across fields, through forests and to mountain peaks as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure. Explore the wilds of Hyrule any way you like - Climb up towers and mountain peaks in search of new destinations, then set your own path to get there and plunge into the wilderness. Along the way, you'll battle towering enemies, hunt wild beasts and gather ingredients for the food and elixirs you'll need to sustain you on your journey. More than 100 Shrines of Trials to discover and explore - Shrines dot the landscape, waiting to be discovered in any order you want. Search for them in various ways, and solve a variety of puzzles inside. Work your way through the traps and devices inside to earn special items and other rewards that will help you on your adventure. Be prepared and properly equipped - With an entire world waiting to be explored, you'll need a variety of outfits and gear to reach every corner. You may need to bundle up with warmer clothes or change into something better suited to the desert heat. Some clothing even has special effects that, for example, can make you faster and stealthier. [Nintendo]",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/34029d16eb1fbb919240fbb1e2cd12a5a78492ec/catalog/provider/6/3/6-1-844837-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/a3c18f5187e5f339d883f5dcb50565a8e4712c94/catalog/provider/6/3/6-1-844837-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Tony Hawk's Pro Skater 3",
+    "Game URL" : "https://www.metacritic.com/game/tony-hawks-pro-skater-3/",
+    "Release Date" : "10/30/2001",
+    "Rating" : "Rated T",
+    "Description" : "Challenge up to four friends in online competitions over a LAN or the Internet. Take them on in both Trick Attack and Graffiti modes. [Activision]",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/79ca141c1f6dbb9e47346ae9f356ec985bcceeeb/catalog/provider/6/3/6-1-13655-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/0ae2d0752c47efb0bb7373937971c08eaccaf804/catalog/provider/6/3/6-1-13655-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Perfect Dark (2000)",
+    "Game URL" : "https://www.metacritic.com/game/perfect-dark-2000/",
+    "Release Date" : "05/22/2000",
+    "Rating" : "Rated M",
+    "Description" : "Step into the Dark... As Carrington Institute's most promising new Agent, Joanna Dark must uncover the truth behind the dataDyne Corporation's recent technological breakthroughs - breakthroughs which could have serious consequences for mankind.",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/cf1bfffa01a5043155266ef6b6f17e94fc1f37e1/catalog/provider/6/3/6-1-6073-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9480215f8c978a8f08400ff21c2c5bf9c0d2059c/catalog/provider/6/3/6-1-6073-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Red Dead Redemption 2",
+    "Game URL" : "https://www.metacritic.com/game/red-dead-redemption-2/",
+    "Release Date" : "10/26/2018",
+    "Rating" : "Rated M",
+    "Description" : "Developed by the creators of Grand Theft Auto V and Red Dead Redemption, Red Dead Redemption 2 is an epic tale of life in America's unforgiving heartland. The game's vast and atmospheric world also provides the foundation for a brand new online multiplayer experience. America, 1899. The end of the Wild West era has begun. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the nation massing on their heels, the gang has to rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal fissures threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang that raised him. [Rockstar]",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/3e540809af1b08e046881a9c0904bcdaa802f225/catalog/provider/6/3/6-1-674478-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/2fcfbd91ba65955fe3e0e3b69cf51ff0e14fb065/catalog/provider/6/3/6-1-674478-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grand Theft Auto V",
+    "Game URL" : "https://www.metacritic.com/game/grand-theft-auto-v/",
+    "Release Date" : "11/18/2014",
+    "Rating" : "Rated M",
+    "Description" : "The sprawling sun-soaked metropolis of Los Santos is chock full of self-help coaches, starlets and C-List celebrities, once on top of the media world, now struggling to stay relevant in time of economic malaise and lowest-common-denominator reality TV. Amidst this madness, three unique criminals plan their own chances of survival and success: Franklin, a street-level hustler in search of opportunities for serious money; Michael, an ex-con whose \"retirement\" is a less rosy than he hoped it would be; and Trevor, a violent dude driven by the chance for a quick high and the next big score. Nearly out of options, the crew risks it all in a series of daring and dangerous heists that could set them up for life - one way or the other.",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/62cdb69b12788142c17f6034bfb122eef0c4505c/catalog/provider/6/3/6-1-675075-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/809b197db2a89301cfe50f357663da63fca23201/catalog/provider/6/3/6-1-675075-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Metroid Prime",
+    "Game URL" : "https://www.metacritic.com/game/metroid-prime/",
+    "Release Date" : "11/17/2002",
+    "Rating" : "Rated T",
+    "Description" : "Samus returns in a new mission to unravel the mystery behind the ruined walls scattered across Tallon IV. In Metroid Prime, you'll play the role of this bounty hunter and view the world through her visor, which displays information ranging from current energy levels to ammunition. Equipped with a Power Beam and Gravity Suit, you must shoot locked switches, solve puzzles, and eliminate enemies. It's up to you to explore the world and recover more power-ups and weapons, which gradually open more gameplay areas.",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/3b8158ac43e445d6c16b2add36f512d44cac7e62/catalog/provider/6/3/6-1-12131-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/317ab506b3c84cb3a8d92b67a2b0fca51d1f9330/catalog/provider/6/3/6-1-12131-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grand Theft Auto III",
+    "Game URL" : "https://www.metacritic.com/game/grand-theft-auto-iii/",
+    "Release Date" : "10/22/2001",
+    "Rating" : "Rated M",
+    "Description" : "Players are put at the heart of their very own gangster movie, and let loose in a fully-realised 3 dimensional city with a cast of hundreds, 50 plus vehicles, ranging from sports cars to ice cream trucks and from boats to buses, 3 hours of music, including opera, reggae, house, drum and bass, pop and disco, and a huge array of street ready weapons. [Rockstar Games]",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/6adeeaa2e3248bc93784c4b6340f94e53197d1a5/catalog/provider/6/3/6-1-12649-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9a06027973cde69d87b6cdb57420a93b53ffb96d/catalog/provider/6/3/6-1-12649-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Super Mario Odyssey",
+    "Game URL" : "https://www.metacritic.com/game/super-mario-odyssey/",
+    "Release Date" : "10/27/2017",
+    "Rating" : "Rated E10+",
+    "Description" : "New Evolution of Mario Sandbox-Style Gameplay. Mario embarks on a new journey through unknown worlds, running and jumping through huge 3D worlds in the first sandbox-style Mario game since Super Mario 64 and Super Mario Sunshine. Set sail between expansive worlds aboard an airship, and perform all-new actions, such as throwing Mario's cap.",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/261f1623ca79e78ad4804718305015c49c1425a8/catalog/provider/6/3/6-1-856470-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/b2f0e2cfd46ea9e27b89fd2fb717936b100c1b63/catalog/provider/6/3/6-1-856470-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Halo: Combat Evolved",
+    "Game URL" : "https://www.metacritic.com/game/halo-combat-evolved/",
+    "Release Date" : "11/15/2001",
+    "Rating" : "Rated M",
+    "Description" : "In a desperate attempt to keep a conquering alien race called the Covenant from finding Earth, you--a cybernteically enhanced soldier representing the peak of human military evolution--and a ragtag group of Marines flee to a distant uncharted system where you unexpectedly stumble across Halo, an enormous alien artifact in orbit between a gas giant and its moon. Your objective: Uncover Halo's horrible secret, and destroy mankind's nemesis - the Covenant. [Microsoft]",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/d2f71abf1bd71ca9b4af88af8b310c789e9e1462/catalog/provider/6/12/6-1-10563-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/eb4e91aa2482caafca7f3a381f6a6e10373cede2/catalog/provider/6/12/6-1-10563-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "NFL 2K1",
+    "Game URL" : "https://www.metacritic.com/game/nfl-2k1/",
+    "Release Date" : "09/07/2000",
+    "Rating" : "Rated E",
+    "Description" : "In the end, NFL 2K1 is a deeper, more refined version of the original game.",
+    "Metascore (Max 100)" : "97",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/59449734a8febc858073b48b22faabd302187f52/catalog/provider/6/3/6-1-9973-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/294c3a51749c972c6273ef4a9ec58199860fda43/catalog/provider/6/3/6-1-9973-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Half-Life 2",
+    "Game URL" : "https://www.metacritic.com/game/half-life-2/",
+    "Release Date" : "11/16/2004",
+    "Rating" : "Rated M",
+    "Description" : "[Metacritic's 2004 PC Game of the Year] By taking the suspense, challenge and visceral charge of the original, and adding startling new realism and responsiveness, Half-Life 2 opens the door to a world where the player's presence affects everything around him, from the physical environment to the behaviors -- even the emotions -- of both friends and enemies. The player again picks up the crowbar of research scientist Gordon Freeman, who finds himself on an alien-infested Earth being picked to the bone, its resources depleted, its populace dwindling. Freeman is thrust into the unenviable role of rescuing the world from the wrong he unleashed back at Black Mesa. And a lot of people -- people he cares about -- are counting on him. [Vivendi Universal]",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a5819b9859189cf6cf929763b620a0d681b316a3/catalog/provider/6/3/6-1-43965-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/84071b43988b1af408979e3de4d8a5117363323f/catalog/provider/6/3/6-1-43965-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "BioShock",
+    "Game URL" : "https://www.metacritic.com/game/bioshock/",
+    "Release Date" : "08/21/2007",
+    "Rating" : "Rated M",
+    "Description" : "[Metacritic's 2007 Xbox 360 Game of the Year] Going beyond \"run and gun corridors,\" \"monster-closet AIs\" and static worlds, BioShock creates a living, unique and unpredictable FPS experience. After your plane crashes into icy uncharted waters, you discover a rusted bathysphere and descend into Rapture, a city hidden beneath the sea. Constructed as an idealistic society for a hand picked group of scientists, artists and industrialists, the idealism is no more. Now the city is littered with corpses, wildly powerful guardians roam the corridors as little girls loot the dead, and genetically mutated citizens ambush you at every turn. Take control of your world by hacking mechanical devices, commandeering security turrets and crafting unique items critical to your very survival. Upgrade your weapons with ionic gels, explosives and toxins to customize them to the enemy and environment. Genetically modify your body through dozens of Plasmid Stations scattered throughout the city, empowering you with fantastic and often grotesque abilities. Explore a living world powered by Ecological A.I., where the inhabitants have interesting and consequential relationships with one another that impact your gameplay experience. Experience truly next generation graphics that vividly illustrate the forlorn art deco city, highlighted by the most detailed and realistic water effects ever developed in a video game. Make meaningful choices and mature decisions, ultimately culminating in the grand question: do you exploit the innocent survivors of Rapture...or save them? [2K Games]",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ffdad48da4c92e34f26e0ac15377a23b1f4a3c71/catalog/provider/6/12/6-1-63862-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/681da8e3b5ba1c2dd889e5664bbe31cc484773f9/catalog/provider/6/12/6-1-63862-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "GoldenEye 007",
+    "Game URL" : "https://www.metacritic.com/game/goldeneye-007/",
+    "Release Date" : "08/25/1997",
+    "Rating" : "Rated T",
+    "Description" : "You are Bond. James Bond. You are assigned covert operations connected with the GoldenEye weapons satellite. M will brief you on your mission and objectives from London. Q Branch will support your efforts with a plentiful supply of weapons and gadgets. Moneypenny offers you light-hearted best wishes and you're off! Your mission begins in the heavily guarded chemical warfare facility at the Byelomorye Dam in the USSR. Look and shoot in any direction as you navigate 12 interactive 3-D environments. Use stealth and force as you see fit in matters of international security. Consider the military personnel expendable. You are licensed to kill!",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/97b59812e138d16c60723c783a1acd02c2298f4f/catalog/provider/6/3/6-1-3971-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/37c852b0e4a0458a65925c177338c260e34bdd3a/catalog/provider/6/3/6-1-3971-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Uncharted 2: Among Thieves",
+    "Game URL" : "https://www.metacritic.com/game/uncharted-2-among-thieves/",
+    "Release Date" : "10/13/2009",
+    "Rating" : "Rated T",
+    "Description" : "Fortune hunter Nathan Drake returns in Uncharted 2: Among Thieves, a third-person action-adventure/shooter created by award-winning developer Naughty Dog. Down on his luck, Drake is lured back into the treacherous world of thieves and mercenary treasure-seekers he had sought to leave behind. When a mysterious artifact propels Drake on an expedition to find the legendary Himalayan valley of Shambhala, he finds himself embroiled in a dangerous game of cat-and-mouse against a fugitive war criminal who's after more than just the fabled riches of the lost city. Caught in a web of deception and plunged into an increasingly deadly pursuit that tests the limits of his endurance, Drake will be forced to risk everything - but has his luck finally run out? [SCEA]",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b10f99e5cf9526603295351b142d8a2ac84f3222/catalog/provider/6/3/6-1-106607-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/81922687ae52fcfb836a1c8108ebbc6dee2592e5/catalog/provider/6/3/6-1-106607-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Resident Evil 4 (2005)",
+    "Game URL" : "https://www.metacritic.com/game/resident-evil-4-2005/",
+    "Release Date" : "01/11/2005",
+    "Rating" : "Rated M",
+    "Description" : "Resident Evil 4 marks a new chapter in the Resident Evil series. You'll rejoin Leon S. Kennedy six years after his first mission as a rookie cop from Resident Evil 2. Now a US agent, Leon is on a top secret mission to investigate the disappearance of the president's daughter. As Leon, you must make your way to a mysterious location in Europe, where new enemies await. Take them down by using enhanced aim-and-shoot features and a new action button.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/81114a7e49ef3eed2d4807635cf0134a17491bd6/catalog/provider/6/3/6-1-15522-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/192109673b813f4dbcb2a67b7b2ccc5e42f04701/catalog/provider/6/3/6-1-15522-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Baldur's Gate 3",
+    "Game URL" : "https://www.metacritic.com/game/baldurs-gate-3/",
+    "Release Date" : "08/03/2023",
+    "Rating" : "Rated M",
+    "Description" : "An ancient evil has returned to Baldur's Gate, intent on devouring it from the inside out. The fate of Faerun lies in your hands. Alone, you may resist. But together, you can overcome. Gather your party and return to the Forgotten Realms in a tale of fellowship and betrayal, sacrifice and survival, and the lure of absolute power. Mysterious abilities are awakening inside you, drawn from a mind flayer parasite planted in your brain. Resist, and turn darkness against itself. Or embrace corruption, and become ultimate evil.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/28be45b25d1f22e0dbe65849f2f61ca0f32f651c/catalog/provider/7/2/7-1695438055.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/2ef698de417fa86c137b8d7565f64ae0045b3ec4/catalog/provider/7/2/7-1695438055.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Orange Box",
+    "Game URL" : "https://www.metacritic.com/game/the-orange-box/",
+    "Release Date" : "10/10/2007",
+    "Rating" : "Rated M",
+    "Description" : "Games included in The Orange Box compilation: The original Half-Life 2 - The player again picks up the crowbar of research scientist Gordon Freeman, who finds himself on an alien-infested Earth being picked to the bone, its resources depleted, its populace dwindling. Freeman is thrust into the unenviable role of rescuing the world from the wrong he unleashed back at Black Mesa. And a lot of people - people he cares about - are counting on him. Half-Life 2: Episode One - The player reprises his role of Dr. Freeman, who must immediately face the repercussions of his actions in City 17 and the Citadel. Freeman reconnects with Alyx Vance and her robot, Dog, as they continue their support of the resistance's battle against the Combine forces. Half-Life 2: Episode Two -- the second installment in Valve's episodic trilogy advances the award-winning story, leading the player to new locations outside of City 17. Portal - a pioneering type of single player action game that rewrites the rules for how players approach and manipulate their environment -- much like how Half-Life 2's Gravity Gun reinvented the way gamers interact with objects in the game. Team Fortress 2 - an all-new version of the legendary title that spawned team based multiplayer action games. The game's daring new art style features the most advanced graphics of any Source-based game released to date. [Valve Software]",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/82c1dc783b568dd57c8e9bdba24acf2faaf77e03/catalog/provider/6/12/6-1-78321-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/1bcde73ee5effade7fcd4999994916af33c3abc1/catalog/provider/6/12/6-1-78321-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Tekken 3",
+    "Game URL" : "https://www.metacritic.com/game/tekken-3/",
+    "Release Date" : "04/29/1998",
+    "Rating" : "Rated T",
+    "Description" : "An ancient evil force has reawakened, attacking in secret and feeding on the souls of mighty warriors. To lure it out of hiding will take the greatest fighting contest the world has ever seen...Tekken 3. Some are fighting for revenge, some for honor, Ultimately, all are fighting for their lives and the fate of all mankind.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/0228b124fa414b0cb2a6f897fb2dca70d230c23d/catalog/provider/6/3/6-1-7967-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9a17c61e5810a8c7cf838309ef6380f0c16b7ad0/catalog/provider/6/3/6-1-7967-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Mass Effect 2",
+    "Game URL" : "https://www.metacritic.com/game/mass-effect-2/",
+    "Release Date" : "01/26/2010",
+    "Rating" : "Rated M",
+    "Description" : "The Mass Effect trilogy is a science fiction adventure set in a vast universe filled with dangerous alien life forms and mysterious uncharted planets. In this dark second chapter, Saren's evil army of Geth soldiers has just been defeated, and humans, who are still struggling to make their mark on the galactic stage, are now faced with an even greater peril. [BioWare]",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a2a57499945eb9f3fb060bfa2b83ae7f4c5aceee/catalog/provider/6/12/6-1-657262-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/5f2b8669e57122fea17b44d965d9889bc1247b24/catalog/provider/6/12/6-1-657262-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The House in Fata Morgana - Dreams of the Revenants Edition -",
+    "Game URL" : "https://www.metacritic.com/game/the-house-in-fata-morgana-dreams-of-the-revenants/",
+    "Release Date" : "04/09/2021",
+    "Rating" : "Rated M",
+    "Description" : "A gothic suspense tale set in a cursed mansion. The House in Fata Morgana is a full-length visual novel spanning nearly a millennium that deals in tragedy, human nature, and insanity.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/3b99030c0da274272c8a6f20588ea67527da92fd/catalog/provider/6/3/6-1-737912-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/078211ba68eca6101ac85e2fe6ca73ba0744e078/catalog/provider/6/3/6-1-737912-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Elden Ring",
+    "Game URL" : "https://www.metacritic.com/game/elden-ring/",
+    "Release Date" : "02/25/2022",
+    "Rating" : "Rated M",
+    "Description" : "A New World Created By Hidetaka Miyazaki And George R. R. Martin ELDEN RING, developed by FromSoftware, Inc. and BANDAI NAMCO Entertainment Inc., is a fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki creator of the influential DARK SOULS video game series; and George R.R. Martin author of The New York Times best-selling fantasy series, A Song of Ice and Fire. Danger and discovery lurk around every corner in FromSoftware's largest game to-date. Hidetaka Miyazaki, President and Game Director of FromSoftware Inc. Known for directing critically-acclaimed games in beloved franchises including Armored Core, Dark Souls, and Sekiro: Shadows Die Twice. George R.R. Martin is the #1 New York Times bestselling author of many novels, including the acclaimed series A Song of Ice and Fire - A Game of Thrones, A Clash of Kings, A Storm of Swords, A Feast For Crows, and A Dance with Dragons. As a writer-producer, he has worked on The Twilight Zone, Beauty and the Beast, and various feature films and pilots that were never made.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/bec1a1ba095cd2b7c9f95909ec5ff141d3a07433/catalog/provider/6/3/6-1-824862-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9556f0df83e65c9623c55c7e9fe06b984358d1e3/catalog/provider/6/3/6-1-824862-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Elder Scrolls V: Skyrim",
+    "Game URL" : "https://www.metacritic.com/game/the-elder-scrolls-v-skyrim/",
+    "Release Date" : "11/11/2011",
+    "Rating" : "Rated M",
+    "Description" : "The next chapter in the Elder Scrolls saga arrives from the Bethesda Game Studios. Skyrim reimagines the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose. Play any type of character you can imagine, and do whatever you want; the legendary freedom of choice, storytelling, and adventure of The Elder Scrolls is realized like never before. Skyrim's new game engine brings to life a complete virtual world with rolling clouds, rugged mountains, bustling cities, lush fields, and ancient dungeons. Choose from hundreds of weapons, spells, and abilities. The new character system allows you to play any way you want and define yourself through your actions. Battle ancient dragons like you've never seen. As Dragonborn, learn their secrets and harness their power for yourself.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/c59e89cad9c3b4a35e57504520335c0fa62618a4/catalog/provider/6/12/6-1-174672-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/efdae3f0850d665c80098283363aa214d5d858eb/catalog/provider/6/12/6-1-174672-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Half-Life",
+    "Game URL" : "https://www.metacritic.com/game/half-life/",
+    "Release Date" : "11/19/1998",
+    "Rating" : "Rated M",
+    "Description" : "Half-Life combines great storytelling in the tradition of Stephen King with intense action and advanced technology to create a frighteningly realistic world where players need to think smart to survive. Half-Life has won more than 50 Game of the Year awards from publications around the world, and was named 'Best PC Game Ever' in PC Gamer's November 1999 issue. [Sierra]",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/bd699967ab20e9238517876dd5f744f91d497f26/catalog/provider/6/3/6-1-274-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9835ff6a6d44d8184bd73ec891e75e04bb9c1438/catalog/provider/6/3/6-1-274-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: Tears of the Kingdom",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-tears-of-the-kingdom/",
+    "Release Date" : "05/12/2023",
+    "Rating" : "Rated E10+",
+    "Description" : "An epic adventure across the land and skies of Hyrule awaits in The Legend of Zelda™: Tears of the Kingdom for Nintendo Switch™. The adventure is yours to create in a world fueled by your imagination. In this sequel to The Legend of Zelda: Breath of the Wild, you'll decide your own path through the sprawling landscapes of Hyrule and the mysterious islands floating in the vast skies above. Can you harness the power of Link's new abilities to fight back against the malevolent forces that threaten the kingdom?",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/530b7229232d677c011c1d7be9d4e0c7eef30680/catalog/provider/6/3/6-1-939061-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/e10f509516c966c1cc9b1288cfa6619f044afa71/catalog/provider/6/3/6-1-939061-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: The Wind Waker",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-the-wind-waker/",
+    "Release Date" : "03/24/2003",
+    "Rating" : "Rated E",
+    "Description" : "AN EVIL WIND IS RISING... Legend has it that whenever evil has appeared, a hero named Link has arisen to defeat it. The legend continues on the surface of a vast and mysterious sea as Link sets sail in his most epic, awe-inspiring adventure yet. Aided by a magical conductor's baton called the Wind Waker, he will face unimaginable monsters, explore puzzling dungeons, and meet a cast of unforgettable characters as he searches for his kidnapped sister. * Immerse yourself in a world unlike you've ever seen, as you sail across a vast, unexplored ocean. * Master a magical conductor's baton known as the Wind Waker to control the wind and much more! * Connect to a pal's Game Boy® Advance and play cooperatively -- get hints, uncover secrets, and get help in battle! * Use new items like the Grappling Hook and Deku Leaf to take the fight to spectacular, massive bosses. * Take on hordes of incredibly animated enemies as you search through riddle-filled dungeons.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a63999087dbf346223c6ca07766041e0ba2f23e9/catalog/provider/6/3/6-1-12911-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/93890de0d78a95a9a7f97a6d7417027765005139/catalog/provider/6/3/6-1-12911-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Gran Turismo",
+    "Game URL" : "https://www.metacritic.com/game/gran-turismo/",
+    "Release Date" : "05/12/1998",
+    "Rating" : "Rated E",
+    "Description" : "With authentic cars, courses, and car physics, Gran Turismo 4 adds an even more realistic racing simulation to the series. The characteristics of each car take into account weight, speed, friction, and more to deliver realistic handling. Test-drive new vehicles in courses located in various sites, such as Nurburgring Nordschleife, New York City, the Grand Canyon, and Tsukuba Circuit. The PSP version of Gran Turismo 4 lets you race against your friends via wireless network.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ffc52876a5cc6a07a12eea36dd7d9699a2aa5a6d/catalog/provider/6/3/6-1-3991-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/ddfc8c2cafbf61c374a63e6b3728fbc7c7209c8b/catalog/provider/6/3/6-1-3991-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Metal Gear Solid 2: Sons of Liberty",
+    "Game URL" : "https://www.metacritic.com/game/metal-gear-solid-2-sons-of-liberty/",
+    "Release Date" : "11/12/2001",
+    "Rating" : "Rated M",
+    "Description" : "Since the incident on Shadow Moses Island, Metal Gear's top-secret technology has been leaked into the black market through the machinations of Revolver Ocelot. As a result, countless variations of Metal Gears have sprung up in every corner of the globe, making the weapon an increasingly common component of the armed forces of nuclear powers. In the midst of all of this, Solid Snake, now a member of the anti-Metal Gear group \"Philanthropy,\" has learned that a new prototype Metal Gear has been developed by the U.S. Marines and is being transported in secret to an unknown destination. To learn more about this new machine, Snake must infiltrate the transport, disguised as a tanker, as it makes its way down the Hudson River. Just as Snake is about to begin his mission, however, the ship is seized by a mysterious and well-armed group bent on stealing the new Metal Gear for their own, nefarious purposes. [Konami]",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/25f0998f841ff9967271a1d7b7cf19e0d06cd2ba/catalog/provider/6/3/6-1-9662-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/06487f05c65cf216315fe6651b63d256ab953077/catalog/provider/6/3/6-1-9662-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grand Theft Auto Double Pack",
+    "Game URL" : "https://www.metacritic.com/game/grand-theft-auto-double-pack/",
+    "Release Date" : "11/04/2003",
+    "Rating" : "Rated M",
+    "Description" : "From the dark and seedy streets of Liberty City's underworld to the glamorous hedonism of Vice City of the 1980s, the Grand Theft Auto double-pack takes you through the huge worlds of Grand Theft Auto III and it's sequel Vice City. The highly controversial Grand Theft Auto III gives you the freedom to go anywhere and jack anyone, putting the dark, intriguing and ruthless world of crime at your fingertips. Vice City is an entirely new game set in the '80s, preserving and adding to the free-roaming gameplay, cinematic graphics and immersive audio experience that made the Grand Theft Auto III so popular.",
+    "Metascore (Max 100)" : "96",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/cf9952f0ce22e6f38e7a0c25ba9b0130dac9c578/catalog/provider/6/3/6-1-12784-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/e16a115df640e0987e576945d88e43e5cb996ddb/catalog/provider/6/3/6-1-12784-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Portal: Companion Collection",
+    "Game URL" : "https://www.metacritic.com/game/portal-companion-collection/",
+    "Release Date" : "06/28/2022",
+    "Rating" : "Rated T",
+    "Description" : "Including Portal and Portal 2, the Companion Collection comes to Nintendo Switch with all the groundbreaking gameplay, dark humor, and exploration that earned the series hundreds of awards. In Portal, you'll use a highly experimental portal device to solve physical puzzles and challenges. Maneuver objects--and yourself--through space to puzzle your way through the mysterious Aperture Science Laboratories. Return to Aperture Laboratories in Portal 2 where you'll once again face off with the lethally inventive, power-mad A.I. named GLaDOS. Meet an expanded cast of characters as you think your way through dangerous, never-before-seen areas of the laboratories and a wider variety of portal puzzles. Plus Portal 2 also includes a co-operative game mode with local, split-screen and online multiplayer so you and a friend can think with portals.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ae69b9be4cf44fefa4f7992056ec155de4d71a12/catalog/provider/6/12/6-1-852409-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c51975740b8116a6f3508aa64fe4a424a747d0c2/catalog/provider/6/12/6-1-852409-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Baldur's Gate II: Shadows of Amn",
+    "Game URL" : "https://www.metacritic.com/game/baldurs-gate-ii-shadows-of-amn/",
+    "Release Date" : "09/24/2000",
+    "Rating" : "Rated T",
+    "Description" : "An epic continuation of the story that began in \"Baldur's Gate,\" this RPG is set along the southern portion of the Sword Coast, a detailed and rich area of the Forgotten Realms called Amn. It features 300 spells and 130-plus monster types compared to only 130 spells and 60 monster types in Baldur's Gate. [Interplay]",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ccde8cc4f8af6a3a3ce54dbe6318a44e301fac0d/catalog/provider/6/3/6-1-687392-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c7dc52febf7375aaf200e0282cc56d8c7f6282d9/catalog/provider/6/3/6-1-687392-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grand Theft Auto: San Andreas",
+    "Game URL" : "https://www.metacritic.com/game/grand-theft-auto-san-andreas/",
+    "Release Date" : "10/26/2004",
+    "Rating" : "Rated M",
+    "Description" : "[Metacritic's 2004 PS2 Game of the Year] Five years ago Carl Johnson escaped from the pressures of life in Los Santos, San Andreas... a city tearing itself apart with gang trouble, drugs and corruption. Where filmstars and millionaires do their best to avoid the dealers and gangbangers. Now, it's the early 90s. Carl's got to go home. His mother has been murdered, his family has fallen apart and his childhood friends are all heading towards disaster. On his return to the neighborhood, a couple of corrupt cops frame him for homicide. CJ is forced on a journey that takes him across the entire state of San Andreas, to save his family and to take control of the streets. [Rockstar]",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/44ed1133aacaff97799205a6a019b467cad27ed5/catalog/provider/6/3/6-1-53856-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/a0092c0701ac51a5104e9be26fb347a78f96d8f1/catalog/provider/6/3/6-1-53856-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: Tears of the Kingdom - Nintendo Switch 2 Edition",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-tears-of-the-kingdom-nintendo/",
+    "Release Date" : "06/05/2025",
+    "Rating" : "Rated E10+",
+    "Description" : "Upgrade your adventures in Hyrule on the Nintendo Switch 2 system! Jump back into the Legend of Zelda: Breath of the Wild and The Legend of Zelda: Tears of the Kingdom games, now with enhanced resolution, increased frame rates, HDR support, and faster load times. Plus, you can get even more out of your adventures with ZELDA NOTES. Use Navigation to find shrines and Koroks, hear previously untold stories from in-game characters, share Autobuild blueprints, and more! This game-specific service is designed to provide a more streamlined gameplay experience.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/d93ae8e18bbf19c041bc7fc391eb7ae319478333/catalog/provider/7/2/7-1749776519.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/596dd391684e958f5c6cbab839f96ebdcb69b0fe/catalog/provider/7/2/7-1749776519.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grand Theft Auto: Vice City",
+    "Game URL" : "https://www.metacritic.com/game/grand-theft-auto-vice-city/",
+    "Release Date" : "10/29/2002",
+    "Rating" : "Rated M",
+    "Description" : "[Metacritic's 2002 PS2 Game of the Year ] Welcome to Vice City. Welcome to the 1980s. Having just made it back onto the streets of Liberty City after a long stretch in maximum security, Tommy Vercetti is sent to Vice City by his old boss, Sonny Forelli. They were understandably nervous about his re-appearance in Liberty City, so a trip down south seemed like a good idea. But all does not go smoothly upon his arrival in the glamorous, hedonistic metropolis of Vice City. He's set up and is left with no money and no merchandise. Sonny wants his money back, but the biker gangs, Cuban gangsters, and corrupt politicians stand in his way. Most of Vice City seems to want Tommy dead. His only answer is to fight back and take over the city himself. Vice City offers vehicular pleasures to suit every taste. For the speed enthusiast, there's high-performance cars and motorbikes. For the sportsman, a powerboat or a golf buggy lets you enjoy the great outdoors. For those that need that sense of freedom and escape, why not charter a helicopter and see the beauty of Vice City from the air? [Rockstar]",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/81d8ff0978fe3717632c3f2eae296c6d70382486/catalog/provider/6/3/6-1-18290-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/1d0785b59a35f8e3ed6dea9d766c59d594b472d5/catalog/provider/6/3/6-1-18290-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "LittleBigPlanet",
+    "Game URL" : "https://www.metacritic.com/game/littlebigplanet/",
+    "Release Date" : "10/27/2008",
+    "Rating" : "Rated E",
+    "Description" : "In LittleBigPlanet Players meet on a blue and green planet scattered with individual plots -- and use their character's amazing abilities to play, create and share what they build with other gamers throughout the world via the Playstation Network. The LittleBigPlanet experience starts with players learning about their character's powers to interact physically with the environment. There are places to explore, creative resources to collect and puzzles to solve -- all requiring a combination of brains and collaborative teamwork. As soon as players begin their creative skills will grow and they will soon be ready to start creating and modifying their surroundings -- the first step to sharing them with the whole community.Characters have the power to move anything in this glued and stitched-together 3D landscape; they have the power to design, shape and build both objects and entire locations for others to view and play. There's no complicated level editor; all of these skills can be learned by simply playing the game. Creativity is part of the gameplay experience and playing is part of the creative experience. Players can make their world as open or as secretive to explore as they like. When it's ready, they can invite anyone within the LittleBigPlanet community to come and explore their patch -- or can go and explore everybody else's. [SCEA]",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/cf0748341f1e04d6b436aadb11d35f13d0f4866e/catalog/provider/6/3/6-1-84288-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/56fb1a81f6b39b01805098e7516572e26981dc19/catalog/provider/6/3/6-1-84288-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda Collector's Edition",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-collectors-edition/",
+    "Release Date" : "11/17/2003",
+    "Rating" : "Rated E",
+    "Description" : "The greatest legend in gaming! The ultimate Zelda collection! - The Legend of Zelda: Play the game that launched the legend! With an innovative and unique game-play system, remarkably deep puzzle solving, and an epic score, the appeal of this groundbreaking classic is still going strong. - Zelda II - The Adventure of Link: While adhering to the majestic and puzzle-solving elements of the Legend of Zelda, the second game in the series expands on the action sequences and introduces a new magic system, pushing the series in a new direction. - The Legend of Zelda: Ocarina of Time: Zelda moved into three dimensions with gorgeous cinematics, hordes of hostile enemies, the revolutionary targeting system, and the freedom of traveling on horseback. Ocarina of Time leaves all who play it breathless and impressed. - The Legend of Zelda: Majora's Mask: The series again takes a dramatic turn from tradition as Link wanders into a three-day journey in a mysterious parallel world. Majora's Mask challenges players to don magical masks and save a town threatened to be crushed under a menacing moon. Includes Playable Demo for The Legend of Zelda: The Wind Waker!",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/bd5bc6381e4fd7b8bb425ffc73323d1e92e8f1be/catalog/provider/6/3/6-1-57792-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/d072e37b6e1b8829d017dd266544604273578fd5/catalog/provider/6/3/6-1-57792-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Gran Turismo 3: A-Spec",
+    "Game URL" : "https://www.metacritic.com/game/gran-turismo-3-a-spec/",
+    "Release Date" : "07/09/2001",
+    "Rating" : "Rated E",
+    "Description" : "With the addition of two new courses (a downtown Tokyo circuit and the Monte Carlo Grand Prix course), an impressive range of cars (from Vipers to Cooper Minis), and a soundtrack featuring everything from Lenny Kravitz to Jimi Hendrix, this highly anticipated title is finally ready to be driven.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/86278c013bccdbbdbd2621d7de8f7e628e3f4784/catalog/provider/6/3/6-1-4024-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/ba84eff8313f88c0bc65998fe60a1dc3cc4b4c8f/catalog/provider/6/3/6-1-4024-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Halo 2",
+    "Game URL" : "https://www.metacritic.com/game/halo-2/",
+    "Release Date" : "11/09/2004",
+    "Rating" : "Rated M",
+    "Description" : "The Covenant alien race threatens to destroy all humankind, and the only thing standing in its way is Master Chief, a genetically enhanced supersoldier. Master Chief returns in Halo 2, which features new vehicles, weapons, environments, and more. This time, you can interact with your environment, wield two weapons at the same time, board opponents' vehicles, and even switch sides to play the role of a Covenant Elite. Halo 2 also supports broadband multiplayer action via Xbox Live.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ea664694bd5f3054ab73a9f12bf533288c545da4/catalog/provider/6/3/6-1-18997-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/ab731008665a928e69a043b4b6448fa921a559a6/catalog/provider/6/3/6-1-18997-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: Majora's Mask",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-majoras-mask/",
+    "Release Date" : "10/25/2000",
+    "Rating" : "Rated E",
+    "Description" : "Thrown into a parallel world by the mischievous actions of a possessed Skull Kid, Link finds a land in grave danger. The dark power of a relic called Majora's Mask has wreaked havoc on the citizens of Termina, but their most urgent problem is a suicidal moon crashing toward the world. Link has only 72 hours to find a way to stop its descent.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/6f2f8f25004d0d20434e8f65b9418c21bdc34cb3/catalog/provider/6/3/6-1-4758-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/95c18e0762b2eba84a7859e173b1c68f99450dfa/catalog/provider/6/3/6-1-4758-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: A Link to the Past / Four Swords",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-a-link-to-the-past-four-swords/",
+    "Release Date" : "12/03/2002",
+    "Rating" : "Rated E",
+    "Description" : "Now you have a link to one of the greatest adventures in The Legend of Zelda series. The Legend of Zelda: A Link to the Past revives the classic SNES game on the Game Boy Advance and adds a new multiplayer mode. In a Link to the Past, Link travels between the light world and the dark world, conquering fierce monsters and uncovering Hyrule's deepest secrets along the way. Also included is Four Swords, which lets you play with up to three other players, slashing through dungeons and collecting rupees. Whether you choose solo or competitive play, The Legend of Zelda will keep you occupied with its brain-bending puzzles and fun swashbuckling action.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/fdf4d648d919f2616912b3def86bf47f2f5d25f8/catalog/provider/6/3/6-1-18316-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/67a0095a1a484272812048bd68820a9bf9f5b6e3/catalog/provider/6/3/6-1-18316-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Last of Us",
+    "Game URL" : "https://www.metacritic.com/game/the-last-of-us/",
+    "Release Date" : "06/14/2013",
+    "Rating" : "Rated M",
+    "Description" : "Twenty years after a pandemic radically transformed known civilization, infected humans run amuck and survivors kill one another for sustenance and weapons - literally whatever they can get their hands on. Joel, a salty survivor, is hired to smuggle a fourteen-year-old girl, Ellie, out of a rough military quarantine, but what begins as a simple job quickly turns into a brutal journey across the country.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/d80cc523b50f2a238ca2aa31f5f3f5eb3d83881a/catalog/provider/6/3/6-1-849312-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/85009b2759f6f87d0fb5d879f8c937f71cab4189/catalog/provider/6/3/6-1-849312-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: Twilight Princess",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-twilight-princess/",
+    "Release Date" : "11/19/2006",
+    "Rating" : "Rated T",
+    "Description" : "When an evil darkness enshrouds the land of Hyrule, a young farm boy named Link must awaken the hero - and the animal - within. When Link travels to the Twilight Realm, he transforms into a wolf and must scour the land with the help of a mysterious girl named Midna. Using the power and unique control of the Wii console, The Legend of Zelda: Twilight Princess features precise aiming control using the Wii Remote. The Wii Remote and the Nunchuk controller are used for a variety of game activities, including fishing and special sword attacks. Players ride into battle against troops of foul creatures using an amazing horseback combat system, then take on massive bosses that must be seen to be believed. [Nintendo]",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/8e7e4fdfd0e6ab085bd22730362eb1e829a7530b/catalog/provider/6/3/6-1-60566-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/7821537e7d646c2159dfa4b72fb8246896a940ab/catalog/provider/6/3/6-1-60566-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Madden NFL 2003",
+    "Game URL" : "https://www.metacritic.com/game/madden-nfl-2003/",
+    "Release Date" : "08/12/2002",
+    "Rating" : "Rated E",
+    "Description" : "Take Your Game Online: Access an online community where you can meet, chat, and play head-to-head against other gamers. Audio Dream Team: Dynamic play-by-play and analysis by Madden and Michaels. All-New Mini-camp: Hop on John Madden's Cruiser Tour Bus and travel to all NFL cities to complete skilled tasks. Create-A-Playbook: Customize receiver routes, player formations, and your team's entire playbook. Deepest Franchise Mode Ever: Play 30 years of Franchise mode and draft players each season with tips from your scouts. [EA Sports]",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/26f8b3b4184ecaa37abf8dded3cb19513f0f8744/catalog/provider/6/3/6-1-16291-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/92bc59423f6099ff7754fbf87401b9539e26cece/catalog/provider/6/3/6-1-16291-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Persona 5 Royal",
+    "Game URL" : "https://www.metacritic.com/game/persona-5-royal/",
+    "Release Date" : "03/31/2020",
+    "Rating" : "Rated M",
+    "Description" : "Prepare for an all-new RPG experience in Persona 5 Royal based in the universe of the award-winning series, Persona! Don the mask of Joker and join the Phantom Thieves of Hearts. Break free from the chains of modern society and stage grand heists to infiltrate the minds of the corrupt and make them change their ways! Persona 5 Royal is packed with new characters, confidants, story depth, new locations to explore, and a new grappling hook mechanic for stealthy access to new areas. With a new semester at Shujin Academy, get ready to strengthen your abilities in the metaverse and in your daily life. Persona 5 Royal presents a unique visual style and award nominated composer Shoji Meguro returns with an all-new soundtrack. Explore Tokyo, unlock new Personas, customize your own personal Thieves Den, discover a never-before-seen story arc, cutscenes, alternate endings, and more! Even for the most seasoned Phantom Thieves among us, Persona 5 Royal is a new challenge to defy conventions, discover the power within, and fight for justice. Wear the mask. Reveal your truth.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/29cf6c56e17610326ef68e42252bf65952dc5f5b/catalog/provider/6/3/6-1-758783-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/680d39b6ed532883e3947edf7cfa9393713dcabd/catalog/provider/6/3/6-1-758783-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Last of Us Remastered",
+    "Game URL" : "https://www.metacritic.com/game/the-last-of-us-remastered/",
+    "Release Date" : "07/29/2014",
+    "Rating" : "Rated M",
+    "Description" : "The Last of Us has been rebuilt for the PlayStation4 system. Now featuring full 1080p, higher resolution character models, improved shadows and lighting, in addition to several other gameplay improvements. 20 years after a pandemic has radically changed known civilization, infected humans run wild and survivors are killing each other for food, weapons; whatever they can get their hands on. Joel, a violent survivor, is hired to smuggle a 14 year-old girl, Ellie, out of an oppressive military quarantine zone, but what starts as a small job soon transforms into a brutal journey across the U.S. The Last of Us Remastered includes the Abandoned Territories Map Pack, Reclaimed Territories Map Pack, and the critically acclaimed The Last of Us: Left Behind Single Player campaign that combines themes of survival, loyalty, and love with tense, survival-action gameplay. Remastered Features: -Explore a brutal post-pandemic world, fully realized with the power of PlayStation4 system -Includes additional game content: over $30 in value -Delve into Ellies past in Left Behind, the single-player prequel chapter -Eight new multiplayer maps in the Abandoned and Reclaimed Territories packs -In-game cinematic commentary from the cast and creative director",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/92a44e841d595ea124e3ce74f3b068df653278f4/catalog/provider/6/3/6-1-378812-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/f2faafbe4f69771f6411e3ff9c959e1bb3b5afa8/catalog/provider/6/3/6-1-378812-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Red Dead Redemption",
+    "Game URL" : "https://www.metacritic.com/game/red-dead-redemption/",
+    "Release Date" : "05/18/2010",
+    "Rating" : "Rated M",
+    "Description" : "Developed by Rockstar San Diego, as a follow up to the 2004 hit game Red Dead Revolver, Red Dead Redemption is a Western epic, set at the turn of the 20th century when the lawless and chaotic badlands began to give way to the expanding reach of government and the spread of the Industrial Age. The story of former outlaw, John Marston, Red Dead Redemption takes players on a great adventure across the American frontier. Utilizing Rockstar's proprietary Rockstar Advanced Game Engine (RAGE), Red Dead Redemption features an open-world environment for players to explore, including frontier towns, rolling prairies teeming with wildlife, and perilous mountain passes - each packed with an endless flow of varied distractions. Along the way, players experience the heat of gunfights and battles, meet a host of unique characters, struggle against the harshness of one of the world's last remaining wildernesses, and ultimately pick their own precarious path through an epic story about the death of the Wild West and the gunslingers that inhabited it.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ca19d6b5879f7360a7e448cff2afa29857f8d382/catalog/provider/6/12/6-1-109215-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/a279f312525be353c28229f8da8781b403aa428b/catalog/provider/6/12/6-1-109215-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Hades II",
+    "Game URL" : "https://www.metacritic.com/game/hades-ii/",
+    "Release Date" : "09/25/2025",
+    "Rating" : "Rated T",
+    "Description" : "In Hades II, you'll battle beyond the Underworld using dark sorcery as you take on the sinister Titan of Time in an all-new, action-packed, endlessly replayable experience rooted in the Underworld of Greek myth and its deep connections to the dawn of witchcraft. As Melinoe, the immortal Princess of the Underworld, you'll explore a bigger, deeper mythic world, vanquishing the Titan's forces with the full might of Olympus behind you, in a sweeping story that continually unfolds through your every setback and accomplishment. New locations, challenges, upgrade systems, and surprises await as you delve into the ever-shifting Underworld again and again.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/1134390564a38d3a127d40bcdbe0918624024599/catalog/provider/7/2/7-1758648740.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/71450f73d8e08e6354a453e456f544d8bcc65240/catalog/provider/7/2/7-1758648740.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Portal 2",
+    "Game URL" : "https://www.metacritic.com/game/portal-2/",
+    "Release Date" : "04/19/2011",
+    "Rating" : "Rated E10+",
+    "Description" : "Valve is working on a full-length sequel to its award-winning, mind-bending puzzle action game for the Xbox 360 and PC.",
+    "Metascore (Max 100)" : "95",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/7b7d84c3879c98480e9889ecce1d73cfb89cfae7/catalog/provider/6/12/6-1-146293-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c38fda212b7bc3298e96a8c86eb7a2d1472e3902/catalog/provider/6/12/6-1-146293-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-breath-of-the-wild-nintendo/",
+    "Release Date" : "06/05/2025",
+    "Rating" : "Rated E10+",
+    "Description" : "Upgrade your adventures in Hyrule on the Nintendo Switch 2 system! Jump back into the Legend of Zelda: Breath of the Wild and The Legend of Zelda: Tears of the Kingdom games, now with enhanced resolution, increased frame rates, HDR support, and faster load times. Plus, you can get even more out of your adventures with ZELDA NOTES. Use Navigation to find shrines and Koroks, hear previously untold stories from in-game characters, share Autobuild blueprints, and more! This game-specific service is designed to provide a more streamlined gameplay experience.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/e21859f64fab8a4f65f3cece4d138aaedaffd06d/catalog/provider/7/2/7-1750266666.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/a30a10f78ca086e7318595a0a0b50e1cd98e4681/catalog/provider/7/2/7-1750266666.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Astro Bot",
+    "Game URL" : "https://www.metacritic.com/game/astro-bot/",
+    "Release Date" : "09/06/2024",
+    "Rating" : "Rated E10+",
+    "Description" : "When the PS5 mothership is attacked by ASTRO's long-standing galactic nemesis, scrambling its wires and scattering the crew throughout space, only ASTRO can make things right. Setting off on his biggest mission yet, he needs your help to rescue the stranded crew and rebuild the mothership. Make the most of ASTRO's new power-ups, handcrafted to level up your immersion: from springy punches and rockets all the way to a giant sponge! Buckle up for some epic PlayStation camaraderie, join forces with your favourite PlayStation icons and show the universe that small is mighty in this fresh new ASTRO adventure, exclusive to PS5 consoles.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/3a29cf1f2e5968726b704f40320c640c38568567/catalog/provider/7/2/7-1725166976.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/d2055549d9120f70b5891ecee450f140e5d302ae/catalog/provider/7/2/7-1725166976.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Final Fantasy IX",
+    "Game URL" : "https://www.metacritic.com/game/final-fantasy-ix/",
+    "Release Date" : "11/13/2000",
+    "Rating" : "Rated T",
+    "Description" : "The last Final Fantasy for the PlayStation, Final Fantasy IX returns to the pure fantasy roots that spawned the series. This latest installment features highly detailed characters, vehicles, and environments, and breathtaking cinema-graphics. The addition of brand new features such as the story-enhancing Active Time Event system and the return of minigames that grant additional gameplay make Final Fantasy IX not only a memorable gaming experience, but also a significant step forward in the series.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/e062e0e55d952e93223b10fec0d6ca6b59da7da6/catalog/provider/6/12/6-1-3638-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/1d59bc02ebec7030f3b5261ba66d081b4f1c4899/catalog/provider/6/12/6-1-3638-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "God of War",
+    "Game URL" : "https://www.metacritic.com/game/god-of-war/",
+    "Release Date" : "04/20/2018",
+    "Rating" : "Rated M",
+    "Description" : "His vengeance against the gods of Olympus far behind him, Kratos now lives as a man in the lands of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive... and teach his son to do the same. As mentor and protector to a son determined to earn his respect, Kratos is faced with an unexpected opportunity to master the rage that has long defined him. Questioning the dark lineage he's passed on to his son, he hopes to make amends for the shortcomings of his past. Set within the untamed forests, mountains, and realms of Norse lore, God of War features a distinctly new setting with its own pantheon of creatures, monsters, and gods.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/c64c9200e4af3d4ecf823f09241fa5caa7d8d6e4/catalog/provider/6/3/6-1-728084-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/3e192d068493d25dd7b03309b3245f337d68200e/catalog/provider/6/3/6-1-728084-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Elden Ring: Shadow of the Erdtree",
+    "Game URL" : "https://www.metacritic.com/game/elden-ring-shadow-of-the-erdtree/",
+    "Release Date" : "06/21/2024",
+    "Rating" : "Rated M",
+    "Description" : "Rise, Tarnished, and let us walk a new path together. An upcoming expansion for ELDEN RING, Shadow of the Erdtree, is currently in development. We hope you look forward to new adventures in the Lands Between.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b29ca16205e9ead59689886e5531be1dbd2c435d/catalog/provider/7/2/7-1718667405.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9f82bbcd092a05ffceba948a5d30fd7332db141f/catalog/provider/7/2/7-1718667405.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Tony Hawk's Pro Skater 4",
+    "Game URL" : "https://www.metacritic.com/game/tony-hawks-pro-skater-4/",
+    "Release Date" : "10/23/2002",
+    "Rating" : "Rated T",
+    "Description" : "Build your skills, earn respect, and show that you've got what it takes to Go Pro. 190 progressively harder goals. No time clock, no constraints. Pro-specific challenges. Evolving levels. Interact with other skaters. Multi-player modes. Customize your game...Your career is what you make of it.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/afc1e98a06bfbdb05920d01971ee6fa68afa92df/catalog/provider/6/3/6-1-17928-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/51e4fbee79b0f922b1023d94bb91e931c4ac5e17/catalog/provider/6/3/6-1-17928-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Devil May Cry",
+    "Game URL" : "https://www.metacritic.com/game/devil-may-cry/",
+    "Release Date" : "10/17/2001",
+    "Rating" : "Rated M",
+    "Description" : "In a large American metropolis, a man named Dante, a private investigator of the supernatural, is seeking revenge for the death of his mother and brother. The world is waiting, for Dante is no ordinary man, and with his father's sword in hand, he must enter the demon realm and avenge mankind.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/eb2038852cf3e3e7395e3adb5b49b9c9020407da/catalog/provider/6/3/6-1-12072-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/239e6dead0880ca1242698d8196250f748eb5343/catalog/provider/6/3/6-1-12072-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Madden NFL 2002",
+    "Game URL" : "https://www.metacritic.com/game/madden-nfl-2002/",
+    "Release Date" : "08/19/2001",
+    "Rating" : "Rated E",
+    "Description" : "The industry football standard returns featuring the Houston Texans, new player face and body technology, the ability to create your own team with custom helmets, uniforms, and stadiums, and a new training mode that let's you learn from Madden, the master himself.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/6890f70c08aa07089a7fffe049dbfcf0d9a5afac/catalog/provider/6/3/6-1-13729-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/90cf2e5b766d6faa2191a59817bfbd9cdd706a04/catalog/provider/6/3/6-1-13729-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Batman: Arkham City",
+    "Game URL" : "https://www.metacritic.com/game/batman-arkham-city/",
+    "Release Date" : "10/18/2011",
+    "Rating" : "Rated T",
+    "Description" : "Developed by Rocksteady Studios, Batman: Arkham City builds upon the intense, atmospheric foundation of Batman: Arkham Asylum, sending players soaring into Arkham City, the new maximum security \"home\" for all of Gotham City's thugs, gangsters and insane criminal masterminds. Set inside the heavily fortified walls of a sprawling district in the heart of Gotham City, this highly anticipated sequel introduces a brand-new story that draws together a new all-star cast of classic characters and murderous villains from the Batman universe, as well as a vast range of new and enhanced gameplay features to deliver the ultimate experience as the Dark Knight.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/3d2e9320117efac5bfb5b4d7fa4e58c25db0c493/catalog/provider/6/12/6-1-136025-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9bc9e779d91b6722650638baaceff756aa6d08bf/catalog/provider/6/12/6-1-136025-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Metroid Prime Remastered",
+    "Game URL" : "https://www.metacritic.com/game/metroid-prime-remastered/",
+    "Release Date" : "02/08/2023",
+    "Rating" : "Rated T",
+    "Description" : "Intergalactic bounty hunter Samus Aran receives a distress signal from a wrecked frigate in orbit around planet Tallon IV. Upon investigation, the frigate reveals itself to be a Space Pirate research vessel home to terrifying genetic experiments using the mysterious Phazon substance. There, Samus encounters her nemesis, Meta Ridley, whom she pursues to the surface of Tallon IV. It's up to her alone to explore the planet's interconnected regions, investigate its dark secrets, and end the intergalactic threat posed by Phazon. Experience this critically acclaimed first-person adventure like never before with remastered visuals, audio, controls, and more.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b5bb2a369b5ff3bf3deca063b742f2ebf83fedc2/catalog/provider/6/3/6-1-922404-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/7bded2ba448c20b11dd1a896c737daeb6fa0f1ef/catalog/provider/6/3/6-1-922404-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Legend of Zelda: Ocarina of Time 3D",
+    "Game URL" : "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-3d/",
+    "Release Date" : "06/19/2011",
+    "Rating" : "Rated E10+",
+    "Description" : "The Legend of Zelda: Ocarina of Time 3D takes the best-reviewed game of all time for a brand-new experience. Now in 3D all of the graphic textures and colors have been vastly improved, taking advantage of the considerable graphic power of the Nintendo 3DS system. This game tells the epic story of Hyrule and Link™, Zelda™, and Ganondorf in remarkable depth and gives context to the many tales of their struggles. As such, this title represents a perfect entry point for players new to the Zelda franchise. Phenomenally Improved Graphics Beyond even the incredible 3D effect, every graphic texture and character model has been lovingly built from the ground up to create the most dynamic and vivid vision of Zelda's kingdom yet. This is Hyrule as you've always imagined it. Playing the Ocarina Link needs to play the eponymous Ocarina of Time many, many times over the course of the game. This involves a specific series of button presses to play one of the twelve songs in the game. In the original title, you would need to assign the ocarina to an item slot, then likely review the button prompts to your song, then play them from memory. The Nintendo 3DS version has the ocarina constantly available on the Touch Screen, and playing with the button prompts for each song right in front of you. Enhanced Game play While the greatest care has been taken to preserve the classic game play and story, a number of new features make this the definitive version of this extraordinary game.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ab9f3969521b8bb0b5c2e6739c473e64672317f5/catalog/provider/6/3/6-1-157072-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/633704d0a16ea3f5bde0e3495d9127b6ca1ea1c2/catalog/provider/6/3/6-1-157072-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Chrono Cross",
+    "Game URL" : "https://www.metacritic.com/game/chrono-cross/",
+    "Release Date" : "08/15/2000",
+    "Rating" : "Rated T",
+    "Description" : "Featuring a storyline developed by the creator of Chrono Trigger and Xenogears, Chrono Cross has been christened the &quot;Best RPG Creation&quot; by its development team. With multiple scenarios cast along a single story thread, and many different endings, each replay can result in an entirely new adventure. In addition, a brand new battle system makes combat smooth and innovative by introducing an element field system and combo system that gives the player unparalleled flexibility in their fighting options. The elimination of random battles also quickens the pace of the game, and places the choice of where to battle in the player's hands. With character designs by a famed Japanese illustrator and music by the original Chrono Trigger composer, Chrono Cross features visuals and sounds that bring its magic to life.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a573ea9d2f60f1c136ef9b6caf91109eb30a6254/catalog/provider/6/3/6-1-2376-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/08e7eb4897fce92a3471612b10a8a82247e4bcd0/catalog/provider/6/3/6-1-2376-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Madden NFL 2004",
+    "Game URL" : "https://www.metacritic.com/game/madden-nfl-2004/",
+    "Release Date" : "08/12/2003",
+    "Rating" : "Rated E",
+    "Description" : "[Metacritic's 2003 Playstation 2 Game of the Year] Key Features for 2004 include New Playmaker Control - Make pre-snap adjustments to your receiver routes, direct receiver routes during a scramble, direct blocking down field during a run, or read and react to the offense to deliver a crushing tackle; New Owner Mode - Hire your own staff, set your team's ticket prices, build your own stadium, reward key players with signing bonuses and boost player attributes in Mini-Camp drills; Most Realistic NFL Playbooks Ever - Tons of new trick plays, multiple formation variations, and the deepest NFL playbooks from all 32 officially licensed Coaches Club Head Coaches; New Animations and Enhancements - New QB scramble transitions to improve throwing on the run, stumbles, open field blocks, whirlwind defensive reaction moves, sideline wrap tackles, and out of bound pushes.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/df7d37f122261c3ee8c6d7b094f78875fbf11065/catalog/provider/6/3/6-1-52626-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/33ea9b61cef14aedd8b02a11d2d38426f52e7ff7/catalog/provider/6/3/6-1-52626-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Gears of War",
+    "Game URL" : "https://www.metacritic.com/game/gears-of-war/",
+    "Release Date" : "11/07/2006",
+    "Rating" : "Rated M",
+    "Description" : "Gears of War blends tactical action with survival horror and thrusts gamers into a deep and harrowing story of humankind's epic battle for survival against the Locust Horde, a nightmarish race of creatures that surface from the bowels of the planet. Lead war hero Marcus Fenix and his fire team as they face the onslaught of merciless warrior fiends. A revolutionary tactical combat system and breathtaking, high-definition visuals from the Unreal Engine 3 immerse you in a horrifying story of war and survival. A.I. teammates are indiscernable from human players. Voice recognition and real-time lip synching heighten the experience. The battlefield is a lethal place. To survive, suppress your enemy with blindfire, take cover in interactive environments, or use weapons and teammates to outwit your foes.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/67543a2e3e2930ab6335a5a267d1f15af1357a42/catalog/provider/6/12/6-1-68349-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/b24a94cf06d45dd10df8dee09e1d66bae03d097f/catalog/provider/6/12/6-1-68349-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Elder Scrolls IV: Oblivion",
+    "Game URL" : "https://www.metacritic.com/game/the-elder-scrolls-iv-oblivion/",
+    "Release Date" : "03/20/2006",
+    "Rating" : "Rated M",
+    "Description" : "Oblivion is a single-player game that takes place in Tamriel's capital province, Cyrodiil. You are given the task of finding the hidden heir to a throne that sits empty, the previous emperor having been killed by an unknown assassin. With no true Emperor, the gates to Oblivion (the equivalent of hell in the world of Tamriel) open, and demons begin to invade Cyrodiil and attack its people and towns. It's up to you to find the lost heir to the throne and unravel the sinister plot that threatens to destroy all of Tamriel. In keeping with the Elder Scrolls tradition, players have the option to experience the main quest at their own pace, and there are plenty of opportunities to explore the vast world and make your own way. Numerous factions can be joined, such as the thieves or mages guilds, and each contains its own complete storyline and the chance to rise to the head of the faction and reap further rewards. Oblivion features a groundbreaking new AI system, called Radiant AI, which gives non-player characters (NPCs) the ability to make their own choices based on the world around them. They decide where to eat or who to talk to and what they say. They sleep, go to church, and even steal items, all based on their individual characteristics. Full facial animations and lip-synching, combined with full speech for all dialog, allows NPCs to come to life like never before.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/8b9d843118203093866c59c52e05c350de645395/catalog/provider/6/12/6-1-63115-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/6daa3d786559aae9f86f32a594090198f9adb4be/catalog/provider/6/12/6-1-63115-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Sid Meier's Civilization II",
+    "Game URL" : "https://www.metacritic.com/game/sid-meiers-civilization-ii/",
+    "Release Date" : "02/29/1996",
+    "Rating" : "Rated K-A",
+    "Description" : "An empire-building turn-based strategy game. The game starts at the Old Stone Age in 4000 BC. Your tribe begins with a Settlers unit and has no knowledge about the surrounding area. As you found new cities and explore the surroundings, you may find hostile barbarians, villages, and other competing cultures.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a524d5d2805d052a1936b118bec1ad6e0d1e6657/catalog/provider/6/3/6-1-2408-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9f074e5f59649f9e5618ace4375d56201bd14117/catalog/provider/6/3/6-1-2408-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Quake",
+    "Game URL" : "https://www.metacritic.com/game/quake/",
+    "Release Date" : "06/22/1996",
+    "Rating" : "Rated M",
+    "Description" : "Rage through 32 single player levels and 6 deathmatch levels of sheer terror and fully immersive sound and lighting. Arm yourself against the cannibalistic Ogre, fiendish Vore and indestructible Schambler using letal nails, fierce Thunderbolts and abominable Rocket and Grenade Launchers.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/0cec8d9159b2ebadf0aa823d4542304eb5d159ba/catalog/provider/6/3/6-1-55-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/f34c5fc3ed12a3fe24c8b5bf2ae9d37ea7354e18/catalog/provider/6/3/6-1-55-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Metaphor: ReFantazio",
+    "Game URL" : "https://www.metacritic.com/game/metaphor-refantazio/",
+    "Release Date" : "10/11/2024",
+    "Rating" : "Rated T",
+    "Description" : "From the creative minds behind Persona 3, 4, and 5 comes Metaphor: ReFantazio, a unique fantasy world, where your protagonist will journey alongside his fairy companion, Gallica, to lift the curse from the kingdom's lost prince. Control your destiny, face your fears and awaken magical \"Archetype\" powers that lie dormant in your heart. By awakening to an \"Archetype,\" you will unlock the power to channel and combine the abilities of unique job classes. Strengthen your bonds and build your party to take down powerful foes and discover the kingdom's true nature. -Go on uests, dungeon dive, & hunt for treasures by day. Strengthen relationships, build bonds, & increase virtues by night. Choose your actions wisely, time management is key to achieving your goal. Ride your \"gauntlet runner\" to faraway dungeons & towns across an expansive world. Discover beautiful landscapes  accompanied by captivating music, immersive UI, & anime cutscenes. A unique battle system combining turn based & real time action grants strategy & exhilaration at every turn. Party customization through \"Archetypes\" provides freedom to personalize your adventure. A mysterious & exciting story unfolds in a world where people must fight their own anxiety. Join the high-stakes Royal Tournament that promises hours of captivating exploration and discovery.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/f6cb50e22c2a6364d0fcc3bb3419bcde798f8b6d/catalog/provider/7/2/7-1727501371.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9576fc3181483a2ca8c2742b1a2faae7ef008aaf/catalog/provider/7/2/7-1727501371.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Call of Duty 4: Modern Warfare",
+    "Game URL" : "https://www.metacritic.com/game/call-of-duty-4-modern-warfare/",
+    "Release Date" : "11/05/2007",
+    "Rating" : "Rated M",
+    "Description" : "As Call of Duty 4: Modern Warfare's single player campaign unfolds, the player is introduced to new gameplay at every turn -- one moment you are fast-roping from your Black Hawk helicopter after storming into the war zone with an armada of choppers, the next you are a sniper, under concealment, in a Ghillie suit miles behind enemy lines, the next you are engaging hostiles from an AC-130 gunship thousands of feet above the battlefield. Mixed with explosive action, Call of Duty 4: Modern Warfare also delivers special effects, including use of depth of field, rim-lighting, character self-shadowing, real time post-processing, texture streaming as well as physics-enabled effects. Infinity Ward deployed a dedicated team from the start to deliver a new level of depth to multiplayer. Building on the hit \"Call of Duty 2\" online experience, Call of Duty 4: Modern Warfare's new multiplayer provides the community an addictive and accessible experience to gamers of all levels.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a170bd651e11310b986da85c175fae0095eab3ff/catalog/provider/6/12/6-1-85439-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/32e7ec42d0309423980ae193dcbb9931cdebedc3/catalog/provider/6/12/6-1-85439-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "BioShock Infinite",
+    "Game URL" : "https://www.metacritic.com/game/bioshock-infinite/",
+    "Release Date" : "03/25/2013",
+    "Rating" : "Rated M",
+    "Description" : "Once conceived as a floating symbol of American ideals at a time when the United States was emerging as a world power, Columbia has been dispatched to distant shores with great fanfare by a captivated public. What begins as a brand new endeavor of hope turns drastically wrong as the city soon disappears into the clouds to whereabouts unknown. The player assumes the role of former Pinkerton agent Booker DeWitt, sent to the lost city to rescue Elizabeth, a young woman imprisoned there since childhood. He develops a relationship with Elizabeth, augmenting his abilities with hers so the pair may escape from a city that is literally falling from the sky. DeWitt must learn to fight foes in high-speed Sky-Line battles, engage in combat both indoors and amongst the clouds, and engage the power of dozens of new weapons and abilities.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/214718237b6e7610b23da10a67e4713328d6b709/catalog/provider/6/3/6-1-162241-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/b0ebc3f218d7cdf02cbcf0aa9b3dd3785b7d45d9/catalog/provider/6/3/6-1-162241-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Halo 3",
+    "Game URL" : "https://www.metacritic.com/game/halo-3/",
+    "Release Date" : "09/25/2007",
+    "Rating" : "Rated M",
+    "Description" : "Halo 3 is the third game in the Halo Trilogy and provides the thrilling conclusion to the events begun in \"Halo: Combat Evolved.\" Halo 3 picks up where \"Halo 2\" left off. The Master Chief is returning to Earth to finish the fight. The Covenant occupation of Earth has uncovered a massive and ancient object beneath the African sands - an object who's secrets have yet to be revealed. Earth's forces are battered and beaten. The Master Chief's AI companion Cortana is still trapped in the clutches of the Gravemind - a horrifying Flood intelligence, and a civil war is raging in the heart of the Covenant. This is how the world ends...",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ae558f87fc523ca546b01713bcc46c084dd9302b/catalog/provider/6/12/6-1-65999-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/44538506e93d9ebf5e3dcdb3ecbaa7807f049dda/catalog/provider/6/12/6-1-65999-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Ninja Gaiden Black",
+    "Game URL" : "https://www.metacritic.com/game/ninja-gaiden-black/",
+    "Release Date" : "09/20/2005",
+    "Rating" : "Rated M",
+    "Description" : "In Ninja Gaiden Black you can reprise the role of Ryu Hayabusa, ninja extraordinaire. This sequel to Ninja Gaiden supplies a new story and new missions, plus two more difficulty settings and cinematic cut scenes that provide background about the protagonist. Ninja Gaiden Black also incorporates the additional content from Hurricane Packs 1 and 2 and includes unlockable content such as the original arcade version of Ninja Gaiden. Ninja Gaiden Black includes online features for keeping track of karma points on the online leader board.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b731467e0ea2c07c763fc974fcdd1ab65141a7c4/catalog/provider/6/12/6-1-68906-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/0cdaf28fa3b48c43245e1c800deb4d8628d3a98f/catalog/provider/6/12/6-1-68906-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Jet Set Radio (2000)",
+    "Game URL" : "https://www.metacritic.com/game/jet-set-radio-2000/",
+    "Release Date" : "10/30/2000",
+    "Rating" : "Rated T",
+    "Description" : "Jet Set Radio lets players join the GGs, an up-and-coming street gang in the futuristic city of Tokyo-to, fighting for the right to self-expression against an overbearing, corporate-controlled police force. Rolling and leaping through crowded urban environments on magnetically driven inline skates, players take control of gang leader Beat and his growing posse of deviant artists as they steal turf from the local gangs by covering the city with colorful graffiti. Guided by Professor K, DJ for the hottest pirate broadcast in town - &quot;Jet Set Radio&quot; - the GGs will ultimately uncover the sinister plot hatched by the controlling powers of Tokyo-to.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/3ec2233a4eed6a2b67f3ee6d3f123e77521a55bf/catalog/provider/6/3/6-1-4503-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/e9fb8b362c28759b7cc08903086b887e5db60894/catalog/provider/6/3/6-1-4503-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Metal Gear Solid",
+    "Game URL" : "https://www.metacritic.com/game/metal-gear-solid/",
+    "Release Date" : "10/21/1998",
+    "Rating" : "Rated M",
+    "Description" : "You are Snake, a government agent on a mission to regain control of a secret nuclear weapons base from terrorist hands. Lightly armed and facing an army of foes, Snake must avoid firefights in order to survive. If Snake can locate them he can utilize advanced hardware, ranging from silenced pistols to ground-to-air missiles. Enemies react to sight and sound - so stay quiet and stay in the shadows. State-of-the-art graphics: textures, transparencies, models and explosions. Taut, gripping story with multiple endings - a truly cinematic experience.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/895d97370e4134a8fd9727e2b50841a11a149588/catalog/provider/6/3/6-1-5142-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c89016d1d0110a73d4ff1d9198a37b273acced25/catalog/provider/6/3/6-1-5142-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grim Fandango",
+    "Game URL" : "https://www.metacritic.com/game/grim-fandango/",
+    "Release Date" : "10/14/1998",
+    "Rating" : "Rated T",
+    "Description" : "Something's rotten in the Land of Dead and you're being played for a sucker. Meet Manny Calavera, travel agent at the Department of Death. He sells luxury packages to souls on their four-year journey to eternal rest. But there's trouble in paradise. Help Manny untangle himself from a conspiracy that threatens his very salvation.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/03c2c353c57c90f5ef1f64e5ac0628baca26af90/catalog/provider/6/3/6-1-345-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/d839f01b50b4e81191415b92dbba61fad4268dd1/catalog/provider/6/3/6-1-345-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Super Mario Advance 4: Super Mario Bros. 3",
+    "Game URL" : "https://www.metacritic.com/game/super-mario-advance-4-super-mario-bros-3/",
+    "Release Date" : "10/21/2003",
+    "Rating" : "Rated E",
+    "Description" : "A combination of exciting platforming action, wild power-ups, and charming Mario style has made Super Mario Bros. 3 a classic. With Super Mario Advance 4: Super Mario Bros. 3, you have your chance to partake in the special adventure anywhere you go on your Game Boy Advance. Your mission is to rescue the Mushroom Kingdom monarchs who have been transformed into animals by Bowser and his mischievous offspring, and in the process save the princess kidnapped by Bowser. Traverse eight huge worlds and encounter fun minigames and frantic boss battles as you explore the first Mario game to use an overworld map.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/e2dfe20a143ebb00a48240ac64cabc747cddaa67/catalog/provider/6/3/6-1-52144-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/6ff00b082a02dc484bddb7ece1de9c87095ce70d/catalog/provider/6/3/6-1-52144-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Tom Clancy's Splinter Cell: Chaos Theory",
+    "Game URL" : "https://www.metacritic.com/game/tom-clancys-splinter-cell-chaos-theory/",
+    "Release Date" : "03/28/2005",
+    "Rating" : "Rated M",
+    "Description" : "As Sam Fisher, Third Echelon's most skilled Splinter Cell operative, you are assigned to execute a hazardous series of operations to investigate and eliminate a new source of information attacks originating in North Korea. At your disposal is a lethal array of tactics ranging from Combat Knife techniques to experimental prototype weapons skills and more-radical hand-to-hand techniques such as the Inverted Chokehold. Experience the intensity of acting as a lone operative fighting tomorrow's threats in the field and of cooperating online with a partner to accomplish crucial missions.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/504e757ee25180c3ece1406066bc589f0ecb19d6/catalog/provider/6/12/6-1-60392-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/bd336d2c61f055394760269cdf2c5d717aad844e/catalog/provider/6/12/6-1-60392-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "God of War: Ragnarok",
+    "Game URL" : "https://www.metacritic.com/game/god-of-war-ragnarok/",
+    "Release Date" : "11/09/2022",
+    "Rating" : "Rated M",
+    "Description" : "The freezing winds of Fimbulwinter have come to Midgard, making survival for Kratos, Atreus, and Mimir in the Norse wilds even more challenging than before. Kratos, still bearing the knowledge of his past mistakes, wants to spare Atreus the bloody lessons he learned from his conflict with gods. He wants to keep his son safe, above all, and their confrontation with Baldur has vindicated the belief that only tragedy will come from further entanglements with the Aesir. Together, Kratos and Atreus will have to make a choice about which path they will take. Whatever they choose will define the fate of all those living in the Nine Realms as Ragnarok approaches. Whatever your choice of combat strategy, the enemies that await in God of War Ragnarök will be ready. The realms have grown harsher, and a whole host of new creatures from across Norse mythology will test your skills. God of War Ragnarök will take you to the previously unreachable Vanaheim, Svartalfheim, and Asgard - as well as to new areas from locations featured in the last game. Exploring the realms will take you everywhere from verdant, otherworldly jungles to intricate subterranean mining networks. This next installment in the series will bring you a more diverse, beautiful, and mysterious variety of locations than in any other God of War game.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/40ddbbece98bd85874f25ee1f217f7060c282ac6/catalog/provider/6/3/6-1-905093-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/94eecfb8841c05d41b519cd6141e11b848a3a04b/catalog/provider/6/3/6-1-905093-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Resident Evil Code: Veronica",
+    "Game URL" : "https://www.metacritic.com/game/resident-evil-code-veronica/",
+    "Release Date" : "03/28/2000",
+    "Rating" : "Rated M",
+    "Description" : "Resident Evil Code: Veronica takes up the story of Claire Redfield, a character from Resident Evil 2. In that game she was searching for her brother Chris (a missing S.T.A.R.S. member) and in Resident Evil Code: Veronica we follow her to Europe where she continues her search at Umbrella headquarters.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/64bd1d1a4f0d550436b104d06cca2a77df41966f/catalog/provider/6/3/6-1-9345-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/cbb7df8c35f7935d44f4ad84f5a0a3b29b6f31ef/catalog/provider/6/3/6-1-9345-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Burnout 3: Takedown",
+    "Game URL" : "https://www.metacritic.com/game/burnout-3-takedown/",
+    "Release Date" : "09/07/2004",
+    "Rating" : "Rated T",
+    "Description" : "Burnout 3 takes the hit series even further, now featuring a unique \"crash and burn\" racing concept and a one-of-a-kind special effects engine that delivers spectacular visuals. The intensity heats up as players race, and often crash, their way through oncoming traffic in an attempt to claim the top spot. Boasting multiple single-player, multiplayer and online crash and race modes, Burnout 3 offers players the opportunity to race through busy city streets and be rewarded for taking risks that result in heart-pounding action and electrifying crashes.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/1e57e77eefc12119cc5f133c1a41faf9239e85c5/catalog/provider/6/12/6-1-58309-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/8efcab20fbf36c2e7544ea9cdc23129ad105f2e1/catalog/provider/6/12/6-1-58309-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Diablo",
+    "Game URL" : "https://www.metacritic.com/game/diablo/",
+    "Release Date" : "12/31/1996",
+    "Rating" : "Rated M",
+    "Description" : "The kingdom of Khandaras has fallen into chaos. An unknown force of evil has swept across the land. Plunging it nto civil war and terrorizing the populace. A mad king, his missing son, and a mysterious archbishop are all pieces to the puzzle that faces you. You have journeyed to the source of the evil. The town of Tristram. Now inhabited by only a handful of survivors. The catherdal there is buildt over the ruins of an ancient monastary, and now eerie lights and sounds are heard echoing through its abandoned halls. Perhaps the answer lies withing the remains of a forgotten past... Diablo invites you to enter a world of dark gothic fantasy. Play as a brave warrior, cunning rogue or mysterious sorceror. As you venture deeper into the labyrinth, you'll discover weapons, armor, and magical treasures, and develop your character's skills and abilities.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/137eaf36e8bb389252824dad38afd6af5abdc61b/catalog/provider/6/3/6-1-101-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/0ebff8a29e46199f0c23bcfdcd3650a1e0d6351e/catalog/provider/6/3/6-1-101-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Metal Gear Solid 3: Subsistence",
+    "Game URL" : "https://www.metacritic.com/game/metal-gear-solid-3-subsistence/",
+    "Release Date" : "03/14/2006",
+    "Rating" : "Rated M",
+    "Description" : "Metal Gear goes online for the first time in Metal Gear Solid 3 Subsistence! Players can battle or team up with up to 7 other friends for online dominance. Featuring different gameplay modes, new camera system, and robust online play, Subsistence is the game that gives players a brand new Metal Gear experience. Includes MGS3 Snake Eater and all new Online Modes, including Death Match, Team Death Match, Sneaking Mission, Capture Mission, and Rescue Mission. Third Person Camera system gives players more control. Bonus Metal Gear and Metal Gear 2 Solid Snake games which have never been released before in the North America. Demo Theater, Duel Mode, and new stages for Snake vs. Monkey mini-game.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/26258cbecb7ef544d83e8e1f8939760b96e4f3ba/catalog/provider/6/3/6-1-68996-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/eed21940740cc00803c6fa07d01e5a733ec08273/catalog/provider/6/3/6-1-68996-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Call of Duty: Modern Warfare 2",
+    "Game URL" : "https://www.metacritic.com/game/call-of-duty-modern-warfare-2/",
+    "Release Date" : "11/10/2009",
+    "Rating" : "Rated M",
+    "Description" : "Modern Warfare 2 continues the gripping and heart-racing action as players face off against a new threat dedicated to bringing the world to the brink of collapse. An entirely new gameplay mode which supports 2-player co-operative play online that is unique from the single player story campaign. Special Ops pits players into a gauntlet of time-trial and objective-based missions. Rank-up as players unlock new Special Ops missions, each more difficult. Missions include highlights from the single player campaign, fan favorites from Call of Duty 4: Modern Warfare and all new, exclusive missions. Setting a new bar for online multiplayer, Modern Warfare 2 multiplayer delivers new capabilities, customization, gamestates and modes, including: Create-a-Class Evolved. Secondary Weapons - Machine Pistols, Shotguns, Handguns, Launchers. Riot Shields. Equipment - Throwing Knives, Blast Shield, Tactical Insertion. Perk Upgrades. Bling (Dual Attachments). Customizable Killstreaks - AC130, Sentry Gun, Predator Missile, Counter-UAV, Care Package. Accolades (Post match reports).",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/82a2dde3fe8a6b9598f72e08fd4bf5bbc86fe30d/catalog/provider/6/12/6-1-102587-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c16fbb553803d8b21668179d15ec53f11984abf5/catalog/provider/6/12/6-1-102587-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Metal Gear Solid 4: Guns of the Patriots",
+    "Game URL" : "https://www.metacritic.com/game/metal-gear-solid-4-guns-of-the-patriots/",
+    "Release Date" : "06/12/2008",
+    "Rating" : "Rated M",
+    "Description" : "Metal Gear Solid 4: Guns of the Patriots features an aging and exhausted Solid Snake in the middle of a futuristic battlefield. In spite of his failing body, Snake is equipped with a crucial new device tentatively known as \"OctoCamo,\" a high-tech suit that dynamically transforms its texture based on Snake's surroundings. This revolutionary new gameplay mechanic allows him to seamlessly blend into the environment, providing him with the means to stalk his enemies like never before. This latest chapter in Hideo Kojima's legendary tactical espionage actin series marks the return of several characters from previous Metal Gear Solid games including Revolver Ocelot, Meryl Silverburgh, Naomi Hunter and Raiden, and features an unforgettable story that depicts the desperate state of the future as seen through the eyes of an older Solid Snake.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b5c527dab54f1fc39790ec482470c2ddf426e1b4/catalog/provider/6/3/6-1-65909-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/f384323f9c6398b2e98f1ea791ec1ba909c81a18/catalog/provider/6/3/6-1-65909-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "God of War (2005)",
+    "Game URL" : "https://www.metacritic.com/game/god-of-war-2005/",
+    "Release Date" : "03/22/2005",
+    "Rating" : "Rated M",
+    "Description" : "Unleash the power of the Gods and embark on a merciless quest as Kratos, an ex-Spartan warrior driven to destroy Ares, the God of War. Armed with lethal double chainblades, Kratos must carve through mythology's darkest creatures including Medusa, Cyclops, the Hydra and more, while solving intricate puzzles in breathtaking environments. Driven by pure revenge, nothing can stop Kratos from achieving absolution.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/f4e87d942b08c12c62b43a957abf95fef83f3a24/catalog/provider/6/3/6-1-58601-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/2e32c8ed3573ed941961ab4a624b6b59581dba99/catalog/provider/6/3/6-1-58601-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Star Wars: Knights of the Old Republic",
+    "Game URL" : "https://www.metacritic.com/game/star-wars-knights-of-the-old-republic/",
+    "Release Date" : "07/17/2003",
+    "Rating" : "Rated T",
+    "Description" : "Long before the Galactic Civil War, an epic drama begins. Engage in this saga set in the Golden Age of the Republic--over 4,000 years before the first Star Wars film, when both Jedi and Sith number in the thousands. With the Galaxy reeling from a recent conflict with the Dark Lords, the ongoing battle between the Jedi and the Sith rages on. It's up to guide your customizable and evolving characters through ten different worlds, fast-paced minigames, and locations including a Sith world, the Wookie homeworld, and the Jedi Academy. Your actions determine the outcome of this colossal galactic war--and your destiny as a Jedi.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/ac5e917e9b1412fd08f7e6c9baaece416fb2229d/catalog/provider/6/12/6-1-653058-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/fa88955fba09735ad7a7e6b2789f8d206b4853a1/catalog/provider/6/12/6-1-653058-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Sid Meier's Civilization IV",
+    "Game URL" : "https://www.metacritic.com/game/sid-meiers-civilization-iv/",
+    "Release Date" : "10/25/2005",
+    "Rating" : "Rated E10+",
+    "Description" : "Faster-Paced Fun - Gameplay has been streamlined for a tighter, faster, and more compelling experience.Greater Accessibility and Ease of Play - An easy-to-use interface will be immediately familiar to RTS and action game players, and newcomers to the series will be able to jump in and play. Tech Tree - Flexible Tech tree allows players more strategic choices for developing their civilizations along unique paths. More Civs, Units, and Improvements to enhance and grow your empire. Multiplayer -LAN, Internet, PBEM, and Persistent Turn-Based Server (PTBS) offer players all-new strategies and ways to play when competing or cooperating with live opponents. Team Play - Whether playing multiplayer or single player, team play offers a new way of setting locked alliances that result in shared wonder effects, visibility, unit trading, and shared territory that delivers a plethora of new strategic and tactical options. Civ IV comes to life! - Beautiful 3D world with dozens of fully animated units (including culturally unique units), and totally customizable armies. Cities and wonders will appear on the map. Wonder movies are back!",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/2be989139f06e9200d54e446857ecd429d58ed9e/catalog/provider/6/3/6-1-57892-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/d72345b2f8ec64abb0f3d1db5c0e9e7b7fe57bb5/catalog/provider/6/3/6-1-57892-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Virtua Fighter 4",
+    "Game URL" : "https://www.metacritic.com/game/virtua-fighter-4/",
+    "Release Date" : "03/17/2002",
+    "Rating" : "Rated T",
+    "Description" : "Two new characters (Lei Fei and Vanessa Lewis) join 11 VF veterans, each with their own unique styles based on real martial arts. New counters and defensive moves allow players to switch up their stances and fighting styles mid-bout. Train a computer-controlled character through sparring and an easy-to-use rewards system, then pit your character against a friend's or challenge the arcade mode.",
+    "Metascore (Max 100)" : "94",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/39f599832e2a20bb2347616eafe790c312d3a275/catalog/provider/6/3/6-1-12683-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/d31b7ff91e35e09291d1718cc810b745f05f4192/catalog/provider/6/3/6-1-12683-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Super Smash Bros. Brawl",
+    "Game URL" : "https://www.metacritic.com/game/super-smash-bros-brawl/",
+    "Release Date" : "03/09/2008",
+    "Rating" : "Rated T",
+    "Description" : "[Metacritic's 2008 Wii Game of the Year] Super Smash Bros. Brawl is the next installment in the Smash Bros. series for the company's Wii console. Among the new characters playable in the game are Meta Knight, the sword-wielding nemesis of Kirby; Pit, the angelic archer from Kid Icarus; Zero Suit Samus, the powerful Metroid series heroine minus her versatile armor; and Wario, who demonstrates a noxious attack of gastronomic proportions. Also Snake, the gritty soldier from Konami's hugely popular Metal Gear series.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/9f8aab37080b8647d4922a95956d05c90dc33e9b/catalog/provider/6/3/6-1-69102-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/992bca4f4ccc18498f2b48954586cafd5cd508dc/catalog/provider/6/3/6-1-69102-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Company of Heroes",
+    "Game URL" : "https://www.metacritic.com/game/company-of-heroes/",
+    "Release Date" : "09/13/2006",
+    "Rating" : "Rated M",
+    "Description" : "A real-time strategy game set in World War II, Company of Heroes brings to life, in full cinematic detail, the greatest war mankind has ever known. Company of Heroes is built on Relic's next-generation Essence Engine and also utilizes the Havok Physics engine, delivering cinematic visual detail in a world completely driven by realistic physics. Gamers will experience the journey of the brave men of Able Company in a deep single-player campaign that begins with the invasion of Normandy through their fight across Europe, all set against the most dynamic battlefield ever seen in a game. Company of Heroes' completely destructable environment means no two battles ever play out in the same way. Advanced squad AI delivers startling new realism and responsiveness, bringing soldiers to life as they interact with the environment and execute advanced squad tactics to eliminate the opposition forces.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/04f8ea580289c7ff7f7c503d331f47040ae94ebf/catalog/provider/6/3/6-1-67441-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/ce915aa0110d785bfdbf917cfc09e7d90aa1974b/catalog/provider/6/3/6-1-67441-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Gran Turismo 2",
+    "Game URL" : "https://www.metacritic.com/game/gran-turismo-2/",
+    "Release Date" : "12/23/1999",
+    "Rating" : "Rated E",
+    "Description" : "The world's most advanced racing game returns with thunderous new features. Over 500 racing machines from world-class manufacturers. - All vehicles are designed according to their exact specifications and are fully customizable. - Insane Arcade mode with power slides, burnouts, jumps and excessive speeds - Killer soundtrack from star-studded bands - Benchmark 3D graphics - Intense two player racing",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/5bdfa4389ca6db1629e9e1b523221607acd7a170/catalog/provider/6/3/6-1-4020-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/60ab25f7c4f5e260e46fefe036dc939e592ff9df/catalog/provider/6/3/6-1-4020-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "The Last of Us Part II",
+    "Game URL" : "https://www.metacritic.com/game/the-last-of-us-part-ii/",
+    "Release Date" : "06/19/2020",
+    "Rating" : "Rated M",
+    "Description" : "Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community of survivors has allowed them peace and stability, despite the constant threat of the infected and other, more desperate survivors. When a violent event disrupts that peace, Ellie embarks on a relentless journey to carry out justice and find closure. As she hunts those responsible one by one, she is confronted with the devastating physical and emotional repercussions of her actions.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/6744b835f04da8c6608f7f237a083739c3041115/catalog/provider/6/3/6-1-771417-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c361c77c2669684d13f5ebca64af1aef34f1e0a4/catalog/provider/6/3/6-1-771417-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Tom Clancy's Splinter Cell: Pandora Tomorrow",
+    "Game URL" : "https://www.metacritic.com/game/tom-clancys-splinter-cell-pandora-tomorrow/",
+    "Release Date" : "03/23/2004",
+    "Rating" : "Rated T",
+    "Description" : "Tom Clancy's Splinter Cell: Pandora Tomorrow, the sequel to the stealth-action game Splinter Cell, once again casts you in the role of Sam Fisher, who is sent in to destroy top-secret documentation held in the embassy of militia leader Suhadi Sadono. Use all-new moves and prototype gear to infiltrate buildings and spare the hostages. This time, you can take your games of espionage against three other players in online multiplayer mode, in which you choose to play as either a mercenary or spy. You've got the moves and the gear, now put them to use.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a96c6841810306a63e37993354ea09f612f75822/catalog/provider/6/3/6-1-54106-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/e24abff6922b15ca353cebf7ac02c8c1ab333b16/catalog/provider/6/3/6-1-54106-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Grand Theft Auto: Chinatown Wars",
+    "Game URL" : "https://www.metacritic.com/game/grand-theft-auto-chinatown-wars/",
+    "Release Date" : "03/17/2009",
+    "Rating" : "Rated M",
+    "Description" : "Grand Theft Auto: Chinatown Wars is an entirely original entry into the critically acclaimed Grand Theft Auto series, and brings a new level of interactivity to its sprawling open environments. With the use of the DS touch screen, players navigate their way through the streets as they uncover the truth behind an epic tale of crime and corruption within the Triad crime syndicate, delivering the unprecedented amount of depth that has become a true trademark of the franchise.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/19bac654da7eef6faae4ec763ee8670130990b26/catalog/provider/6/3/6-1-101495-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/6e17745a144dce22802ca33794d7caf52e1bbc2c/catalog/provider/6/3/6-1-101495-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Pac-Man Championship Edition DX",
+    "Game URL" : "https://www.metacritic.com/game/pac-man-championship-edition-dx/",
+    "Release Date" : "11/17/2010",
+    "Rating" : "Rated E",
+    "Description" : "PAC-MAN Championship Edition DX continues to uphold NAMCO BANDAI's tradition of enhancing a classic franchise for today's gamer. Building upon PAC-MAN Championship Edition's original six courses, the new game features more than 100 varied and mind-boggling mazes to navigate. Several new modes will also be available to test a player's pellet-munching aptitude. In Time Attack Mode, players will vie for the quickest clear time. Fulfill a series of objectives in Mission Mode or compete to devour the most number of ghosts gobbled in Ghost Mode.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b500e3ac774d7838fe983afac55e713e28bdeb37/catalog/provider/6/12/6-1-156770-17.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/39c373d7cbb0ce8d3e1beeb8c0f6b80d91f70afa/catalog/provider/6/12/6-1-156770-17.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Dwarf Fortress",
+    "Game URL" : "https://www.metacritic.com/game/dwarf-fortress/",
+    "Release Date" : "08/08/2006",
+    "Rating" : "",
+    "Description" : "The deepest, most intricate simulation of a world that's ever been created. The legendary Dwarf Fortress is now on Steam. Build a fortress and try to help your dwarves survive against a deeply generated world.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/fca101178214218d721e13ba068f11c3d7238233/catalog/provider/6/12/6-1-97239-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/12988792a89a6d6879d00a476e62691cb405ee32/catalog/provider/6/12/6-1-97239-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Half-Life: Alyx",
+    "Game URL" : "https://www.metacritic.com/game/half-life-alyx/",
+    "Release Date" : "03/23/2020",
+    "Rating" : "",
+    "Description" : "Half-Life: Alyx is Valve's VR return to the Half-Life series. It's the story of an impossible fight against a vicious alien race known as the Combine, set between the events of Half-Life and Half-Life 2. Playing as Alyx Vance, you are humanity's only chance for survival. The Combine's control of the planet since the Black Mesa incident has only strengthened as they corral the remaining population in cities. Among them are some of Earth's greatest scientists: you and your father, Dr. Eli Vance. As founders of a fledgling resistance, you've continued your clandestine scientific activityperforming critical research, and building invaluable tools for the few humans brave enough to defy the Combine. Every day, you learn more about your enemy, and every day you work toward finding a weakness. ABOUT GAMEPLAY IN VR: Valve's return to the Half-Life universe that started it all was built from the ground up for virtual reality. VR was built to enable the gameplay that sits at the heart of Half-Life. Immerse yourself in deep environmental interactions, puzzle solving, world exploration, and visceral combat. Lean to aim around a broken wall and under a Barnacle to make an impossible shot. Rummage through shelves to find a healing syringe and some shotgun shells. Manipulate tools to hack alien interfaces. Toss a bottle through a window to distract an enemy. Rip a Headcrab off your face and throw it at a Combine soldier. Extra content for Index owners Customers who have purchased Valve Index hardware by the end of 2019 will have access to unique bonuses starting early next year: * Explore environments from Half-Life: Alyx in your SteamVR Home space * Alternate gun skins to embellish Alyx's arsenal * Special Half-Life: Alyx-themed content for Counter-Strike: Global Offensive and Dota 2 Community-built environments * A set of Source 2 tools for building new environments will ship with the game, enabling any player to build and contribute new environments for the community to enjoy. Hammer, Valve's level authoring tool, has been updated with all of the game's virtual reality gameplay tools and components.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/356b94aa6c847a07318cb9413689fb8e671d8aec/catalog/provider/6/12/6-1-733130-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/9b9d54dab0f97d5e725e457e5945fddf9b092fc6/catalog/provider/6/12/6-1-733130-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Divinity: Original Sin II",
+    "Game URL" : "https://www.metacritic.com/game/divinity-original-sin-ii/",
+    "Release Date" : "09/14/2017",
+    "Rating" : "",
+    "Description" : "Master deep, tactical combat. Join up to 3 other players - but know that only one of you will have the chance to become a God.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/3d5a0e230cab5d5b64057c4d5591b1f98a36f797/catalog/provider/6/12/6-1-610347-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/18057fecaeaa068a8d98d05595f984e9eaf73758/catalog/provider/6/12/6-1-610347-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Unreal Tournament 2004",
+    "Game URL" : "https://www.metacritic.com/game/unreal-tournament-2004/",
+    "Release Date" : "03/16/2004",
+    "Rating" : "Rated M",
+    "Description" : "Reload, rev up and ride out. The new Tournament is faster, higher and meaner. Land and air based vehicles take combat to a new level; while an arsenal of new weaponry, daunting arenas and battlefields and the challenge of the Assault and Onslaught modes make the gladiator blood sport of the future a brand new experience. Buckle up; it?s gonna be one hell of a ride! [Atari]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/b2118f9c03840e4149255e88c64b54c0b2239976/catalog/provider/6/3/6-1-53889-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/e4fd92672efd36f0167bac17f449acdbd31dadc7/catalog/provider/6/3/6-1-53889-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Braid",
+    "Game URL" : "https://www.metacritic.com/game/braid/",
+    "Release Date" : "08/06/2008",
+    "Rating" : "Rated E10+",
+    "Description" : "[Xbox Live Arcade] Braid is a puzzle-platformer, drawn in a painterly style, where the player manipulates the flow of time in strange and unusual ways. From a house in the city, journey to a series of worlds and solve puzzles to rescue an abducted princess. In each world, you have a different power to affect the way time behaves, and it is time's strangeness that creates the puzzles. The time behaviors include: the ability to rewind, objects that are immune to being rewound, time that is tied to space, parallel realities, time dilation, and perhaps more. Braid treats your time and attention as precious; there is no filler in this game. Every puzzle shows you something new and interesting about the game world. Braid is a 2-D platform game where you can never die and never lose. Despite this, Braid is challengingâ??but the challenge is about solving puzzles, rather than forcing you to replay tricky jumps. Travel through a series of worlds searching for puzzle pieces, then solving puzzles by manipulating time: rewinding, creating parallel universes, setting up pockets of dilated time. The gameplay feels fresh and new; the puzzles are meant to inspire new ways of thinking. [Microsoft]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/cf012027393b19a524a85b9367dcf0e7589069a3/catalog/provider/6/12/6-1-91456-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/8f09fa44a4f1c7b4765e5e75b2ab84c230314b07/catalog/provider/6/12/6-1-91456-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "God of War II",
+    "Game URL" : "https://www.metacritic.com/game/god-of-war-ii/",
+    "Release Date" : "03/13/2007",
+    "Rating" : "Rated M",
+    "Description" : "[Metacritic's 2007 PS2 Game of the Year] God of War saw Kratos, a mortal warrior, set upon an epic quest to dethrone a God. But his journey did not end there. In God of War II, Kratos sits atop his Olympus throne, as the new God of War -- far more ruthless than Ares ever was. To end his continued torment, Kratos must journey to the far reaches of the earth and defeat untold horrors and alter that which no mortal, or god has ever changed, his fate. God of War II sets an epic stage for a devastating mythological war to end all wars. In God of War II, players retake the role of Kratos. Armed with the deadly blades and blistering rage, players are aided by new breath-taking magic and new brutal combat moves. The journey takes them through vividly striking environments where they are faced with a labyrinth of challenging puzzles and mini-games intricately woven into the story. The violent world of Greek mythology comes to life in gory detail as Kratos encounters new mythical characters, and compete in epic boss battles in his quest. [SCEA]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/42512e4c1fb979b9117da70180c50d1a1e3e4663/catalog/provider/6/3/6-1-74276-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/5405c9593e6de885c18962e139c12101543d5297/catalog/provider/6/3/6-1-74276-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Super Mario 3D World",
+    "Game URL" : "https://www.metacritic.com/game/super-mario-3d-world/",
+    "Release Date" : "11/22/2013",
+    "Rating" : "Rated E",
+    "Description" : "Work together with your friends or compete for the crown in the first multiplayer 3D Mario game for the Wii U console. In the Super Mario 3D World game, players can choose to play as Mario, Luigi, Princess Peach or Toad.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a433657945d09b2d9de06d7b75493a31fe981f3e/catalog/provider/6/3/6-1-595282-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/3ca5b08f16ee59941c74c24d53a2a54629bfd679/catalog/provider/6/3/6-1-595282-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Starcraft II: Wings of Liberty",
+    "Game URL" : "https://www.metacritic.com/game/starcraft-ii-wings-of-liberty/",
+    "Release Date" : "07/27/2010",
+    "Rating" : "Rated T",
+    "Description" : "StarCraft II continues the epic saga of the Protoss, Terran, and Zerg. These three distinct and powerful races clash once again in the fast-paced real-time strategy sequel to the legendary original, StarCraft. Legions of veteran, upgraded, and brand-new unit types do battle across the galaxy, as each faction struggles for survival. Featuring a unique single-player campaign that picks up where StarCraft: Brood War left off, StarCraft II presents a cast of new heroes and familiar faces in an edgy sci-fi story filled with adventure and intrigue. In addition, Blizzard again offers unparalleled online play through Battle.net, the company's world-renowned gaming service, with several enhancements and new features to make StarCraft II the ultimate competitive real-time strategy game. Features fast-paced, hard-hitting, tightly balanced competitive real-time strategy gameplay that recaptures and improves on the magic of the original game. New units and gameplay mechanics further distinguish each race. Vibrant new 3D-graphics engine with support for dazzling visual effects and massive unit and army sizes. Full map-making and scripting tools to give players incredible freedom in customizing and personalizing their gameplay experience. [Blizzard]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/f34cf78cea8589b1e995c016529e376c9a0d6243/catalog/provider/6/3/6-1-86379-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/8b7b8aeb5aaecdb84c76a6b974ed8b6fde584adb/catalog/provider/6/3/6-1-86379-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "SSX (2000)",
+    "Game URL" : "https://www.metacritic.com/game/ssx-2000/",
+    "Release Date" : "10/30/2000",
+    "Rating" : "Rated E",
+    "Description" : "Remember when snowboard sims used to suck? The times have truly changed with the monster speed, detailed tracks and super-fast frame rates of EA's first extreme sports game for the PS2.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/8966f7e0bb5b38459397edeeeada8c6194f549c8/catalog/provider/6/3/6-1-7291-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/115ca94352a181ba87d63517c13032b12eac3d2f/catalog/provider/6/3/6-1-7291-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Street Fighter IV",
+    "Game URL" : "https://www.metacritic.com/game/street-fighter-iv/",
+    "Release Date" : "02/17/2009",
+    "Rating" : "Rated T",
+    "Description" : "Street Fighter IV features a mix of returning favourites such as Ryu, Ken, Chun-Li and Guile along with new characters created exclusively for this game such as Crimson Viper, Abel, El Fuerte, and Rufus. Characters and environments are rendered in high definition 3D, while the game is played in the classic Street Fighter 2D perspective with additional 3D camera flourishes. Six-button controls for the game return, with a host of new special moves and features integrated into the input system. Street Fighter IV also incorporates state of the art online match making and worldwide online gameplay. Mixing classic genre-defining game mechanics the franchise is known and loved for with all-new, never-before-seen gameplay systems, Street Fighter IV brings a brand new fighting game to fans the world over. With the inclusion of Capcom's latest advancements in new generation technology, Street Fighter IV promises to deliver an extraordinary experience that will re-introduce the world to the time-honoured art of virtual martial arts. New special moves that go beyond any Street Fighter fan's wildest imagination, including Focus attacks, Super Combos, and the revenged-fueled Ultra Combo system. Classic Street Fighter characters recreated for a new generation of gamers, including the original cast of Street Fighter II. New brawlers: female super-spy Crimson Viper, lucha libre wrestler El Fuerte, mixed martial artist Abel and more. New gameplay elements provide new challenges for both newcomers and the most seasoned Street Fighter pro. Online gameplay features, including instantaneous online challenges, versus mode, tournament mode, and world wide online gameplay. [Capcom]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/eac477b67db79596a7133f2782e4432e274bb743/catalog/provider/6/12/6-1-92322-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/fcc6f8f980dd9e2756d59c376c108d61daf5babf/catalog/provider/6/12/6-1-92322-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Minecraft",
+    "Game URL" : "https://www.metacritic.com/game/minecraft/",
+    "Release Date" : "11/18/2011",
+    "Rating" : "Rated E10+",
+    "Description" : "The game involves players creating and destroying various types of blocks in a three dimensional environment. The player takes an avatar that can destroy or create blocks, forming fantastic structures, creations and artwork across the various multiplayer servers in multiple game modes.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/d1d228bffef361eb03bcb3a5acf8583180ca27be/catalog/provider/6/12/6-1-702279-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/ca2767550e1c640b505d242d38826ded3ca815b2/catalog/provider/6/12/6-1-702279-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Persona 4 Golden",
+    "Game URL" : "https://www.metacritic.com/game/persona-4-golden/",
+    "Release Date" : "11/20/2012",
+    "Rating" : "Rated M",
+    "Description" : "Persona 4: The Golden is a remastered version of PS2 classic Shin Megami Tensei: Persona 4.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/57595acf038caf37094486f772f4efa8c19d35c8/catalog/provider/6/3/6-1-204447-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c4e0c24b50e739457e1a87fcb7c0287f4c1f8262/catalog/provider/6/3/6-1-204447-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Persona 5",
+    "Game URL" : "https://www.metacritic.com/game/persona-5/",
+    "Release Date" : "04/04/2017",
+    "Rating" : "Rated M",
+    "Description" : "Persona 5 is the fifth entry in the Persona series.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/17d755ccbba3d0cd39f41de425173edba267f59b/catalog/provider/6/3/6-1-602147-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/e9ace02ea15d2d7e930916159579aa90b164ff3d/catalog/provider/6/3/6-1-602147-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "SSX 3",
+    "Game URL" : "https://www.metacritic.com/game/ssx-3/",
+    "Release Date" : "10/20/2003",
+    "Rating" : "Rated E",
+    "Description" : "Embark on the ultimate adventure and conquer the mountain with SSX 3. Life begins at the summit where a wide-open mountain awaits you -- board it, explore it, and beat it. Featuring all-new freestyle events and race courses, jaw-dropping tricks, and a cast of cool, customizable characters, SSX 3 is yours to conquer. Redefine the boundaries what you do and what you earn, and go anywhere gravity takes you with SSX 3! [Electronic Arts]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/0676a4b6ce489bf77448c61d38d3e50d5dd79210/catalog/provider/6/3/6-1-52946-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/55b2856abea7602222a3e315967d8b933c20ccaf/catalog/provider/6/3/6-1-52946-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Tom Clancy's Splinter Cell",
+    "Game URL" : "https://www.metacritic.com/game/tom-clancys-splinter-cell/",
+    "Release Date" : "11/17/2002",
+    "Rating" : "Rated T",
+    "Description" : "Infiltrate terrorists' positions, acquire critical intelligence by any means necessary, execute with extreme prejudice, and exit without a trace. In Tom Clancy's Splinter Cell, you are Sam Fisher, a highly trained secret operative of the NSA's secret arm: Third Echelon. Suit up with the latest classified field operative gear and weapons as you travel through diverse mission objectives. The world's future is in your hands, as cyber terrorism and international tensions are about to explode into WWIII.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/08be53189aadc9830db719749f1ae86ff7f2cb11/catalog/provider/6/12/6-1-715954-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/090d8e0980dab50a74f5f667679c1275044e03ef/catalog/provider/6/12/6-1-715954-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Quake III Arena",
+    "Game URL" : "https://www.metacritic.com/game/quake-iii-arena-1999/",
+    "Release Date" : "10/22/2000",
+    "Rating" : "Rated M",
+    "Description" : "Quake III Arena offers a complete deathmatch experience. The game features new 3D arenas, weapons, and character models.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/c2e4c2d30d273498b305c0734b246c2306aa8d9c/catalog/provider/6/3/6-1-1204-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/63f0e2775f28f888c89ab7475341b16d0ed6d12a/catalog/provider/6/3/6-1-1204-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Homeworld",
+    "Game URL" : "https://www.metacritic.com/game/homeworld/",
+    "Release Date" : "08/31/1999",
+    "Rating" : "Rated E",
+    "Description" : "Deported to a harsh desert world, exiles have struggled for three thousand years to regain the stars. Now it's up to you to guide them home through a brutal empire bent on annihilation. Homeworld boasts amazing ship graphics and gorgeous deep-space vistas, a unique command and navigation interface and white-knuckle real-time strategy. [Sierra]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/a78cad122ac32d2f50412b3b4cc84b4ae06a4084/catalog/provider/6/3/6-1-878-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c87359e9df01ab957aeb57268b7098ea91539909/catalog/provider/6/3/6-1-878-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Okami",
+    "Game URL" : "https://www.metacritic.com/game/okami/",
+    "Release Date" : "09/19/2006",
+    "Rating" : "Rated T",
+    "Description" : "In Okami, the legendary monster Orochi has come back to life and turned the world into a veritable wasteland. Players must assume the role of a wolf, an embodiment of the sun god Amaterasu, which is capable of wielding unimaginable power. The state of the world lies in gamer's hands as they must fight ominous beings and reclaim the earth from a curse that plagues it. It is crucial to help Amaterasu make the world a place where all living creatures can dwell once again. [Capcom]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/2158f9b0e23dae8d0842aaa291d1b7bace4ee90b/catalog/provider/6/3/6-1-59887-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/39172cd7acc595deab34bcb9313621f93a519de9/catalog/provider/6/3/6-1-59887-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Fallout 3",
+    "Game URL" : "https://www.metacritic.com/game/fallout-3/",
+    "Release Date" : "10/28/2008",
+    "Rating" : "Rated M",
+    "Description" : "[Metacritic's 2008 PC Game of the Year] Vault-Tec engineers have worked around the clock on an interactive reproduction of Wasteland life for you to enjoy from the comfort of your own vault. Included is an expansive world, unique combat, shockingly realistic visuals, tons of player choice, and an incredible cast of dynamic characters. Every minute is a fight for survival against the terrors of the outside world -- radiation, Super Mutants, and hostile mutated creatures. From Vault-Tec, America's First Choice in Post Nuclear Simulation. Vault 101 - Jewel of the Wastes. For 200 years, Vault 101 has faithfully served the surviving residents of Washington DC and its environs, now known as the Capital Wasteland. Though the global atomic war of 2077 left the US all but destroyed, the residents of Vault 101 enjoy a life free from the constant stress of the outside world. Giant Insects, Raiders, Slavers, and yes, even Super Mutants are all no match for superior Vault-Tec engineering. Yet one fateful morning, you awake to find that your father has defied the Overseer and left the comfort and security afforded by Vault 101 for reasons unknown. Leaving the only home you've ever known, you emerge from the Vault into the harsh Wasteland sun to search for your father, and the truth. [Bethesda Softworks]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/2e0ea404344d2165555f38eda5ff5fe7aef38347/catalog/provider/6/12/6-1-56829-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/2765c6f7df35b78257b242cab89ff4f73769a19c/catalog/provider/6/12/6-1-56829-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Gears of War 2",
+    "Game URL" : "https://www.metacritic.com/game/gears-of-war-2/",
+    "Release Date" : "11/07/2008",
+    "Rating" : "Rated M",
+    "Description" : "Gears of War 2 builds upon the gameplay of the first title in every way. First, the scope of the action is bigger: new characters, more weapons, nastier enemies, bigger vehicles, and grander locales offer more action, more emotion, and more thrills. Next, every major aspect of the game has been refined to create heightened, more immersive experiences. Finally, the overall tone of Gears of War 2 is more badass: replete with new weapon-specific executions, chainsaw duels, and shocking boss fights. Gears of War 2 raises the graphics bar for next-generation games through its breathtaking visual effects, which are made possible through advances in Unreal Engine 3. New visual effects include ambient occlusion, dynamic shadows, improved character lighting, the ability to render hundreds of on-screen characters simultaneously, improved water physics, additional blood and bullet decals, advanced destructible environments, new weather effects, and the introduction of fluid objects. When combined with the sweeping vistas and evocative locales in the world of Sera where the Gears of War 2 story unfolds, these additions help make this the most gorgeous game available this generation. Gears of War 2 continues to push deep, immersive storytelling in video games to greater heights. Humanity's epic battle for survival is felt on both the personal and epic levels as you explore multiple story arcs that introduce new characters and flesh out the histories of familiar ones. A new in-game conversational camera system also helps bring the compelling story to life in a cinematic fashion. [Microsoft]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/aa0e037da412a7cecb731c2d60ad2e5d38885cf1/catalog/provider/6/12/6-1-84379-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/c6993eef80c9e19335dac82c58d618fc910cbd00/catalog/provider/6/12/6-1-84379-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "SoulCalibur II",
+    "Game URL" : "https://www.metacritic.com/game/soulcalibur-ii/",
+    "Release Date" : "08/27/2003",
+    "Rating" : "Rated T",
+    "Description" : "Open the next chapter in world of Soul Calibur. Soul Calibur II features seven distinctive gameplay modes including: Arcade, Versus, Time Attack, Survival, Team Battle, Practice, and the console exclusive Weapon Master. Collect up to 200 different weapons and battle characters with their own styles, strengths, and abilities. In addition to the 13 fighters, each platform has unique special fighters: Link for GameCube, Heihachi for PS2, and Spawn for Xbox. Prove yourself through soul and sword.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/bf795f47fc16a426a01e561bcc81a15ef4197099/catalog/provider/6/3/6-1-13061-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/bde59e6c892ceec3029deb57f39887062d369b53/catalog/provider/6/3/6-1-13061-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Pro Evolution Soccer 2",
+    "Game URL" : "https://www.metacritic.com/game/pro-evolution-soccer-2/",
+    "Release Date" : "03/11/2003",
+    "Rating" : "Rated E",
+    "Description" : "North America, the wait is over. Experience the most realistic virtual recreation of the sport to date. Life-like player models, staggeringly realistic animations, and renowned gameplay bring a soccer experience that can't be beat. This critically acclaimed title is the must have soccer game of the year. Find out what you've been missing. Create your own dream team in the Master League. [Konami]",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/07cae881d5c52f6c090643d532ddb35b70e04714/catalog/provider/6/3/6-1-19410-13.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/fa488ff5073483fef2d6ed11a160df609e92dd3d/catalog/provider/6/3/6-1-19410-13.jpg?auto=webp&fit=cover&height=132&width=88"
+  }, {
+    "Game Title" : "Mass Effect 3",
+    "Game URL" : "https://www.metacritic.com/game/mass-effect-3/",
+    "Release Date" : "03/06/2012",
+    "Rating" : "Rated M",
+    "Description" : "BioWare completes the Mass Effect Trilogy with Mass Effect 3. Earth is burning. Striking from beyond known space, a race of terrifying machines have begun their destruction of the human race. As Commander Shepard, an Alliance Marine, the only hope for saving mankind is to rally the civilizations of the galaxy and launch one final mission to take back the Earth.",
+    "Metascore (Max 100)" : "93",
+    "Game Image" : "https://www.metacritic.com/a/img/resize/4c3dd7833bead9860f911f3c7f0a3b661d10225a/catalog/provider/6/12/6-1-657263-52.jpg?auto=webp&fit=cover&height=72&width=48,https://www.metacritic.com/a/img/resize/252b3d57704fa734ffc2468746448e0b164c9f8f/catalog/provider/6/12/6-1-657263-52.jpg?auto=webp&fit=cover&height=132&width=88"
+  } ]
